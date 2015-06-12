@@ -7,7 +7,7 @@ title: go responsive
   <div class='wrapper-inside clearfix'>
     <div class='top-large'>
       <div class='book-title'>
-        走进响应式
+        多屏时代 -- 响应式网页
       </div>
       <div class='book-author'>
         <a href="https://github.com/happypeter">happypeter</a>
