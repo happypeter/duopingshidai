@@ -48,6 +48,9 @@ title: 写在多屏时代
 
 ![](images/forward/gift.jpg)
 
+<!-- https://teamtreehouse.com/library/responsive-layouts/responsive-theory/what-is-responsive-web-design -->
+<!-- 把上面视频中精彩的内容提炼出来，插入到本文 -->
+
 ### 参考链接
 
 - <http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design>
