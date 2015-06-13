@@ -9,3 +9,7 @@ title: 移动优先
 技术，为不同尺寸的设备优化用户体验，这就是当代响应式网站设计的基本流程，同时也是本书的行文思路。
 
 * http://learn.shayhowe.com/advanced-html-css/responsive-web-design/ 有 mobile first 的讨论。
+
+
+- http://designshack.net/articles/css/mobilefirst/
+  - 非常多的好内容。
