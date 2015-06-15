@@ -29,25 +29,13 @@ title: 移动优先
 
 ### 为什么要 “移动优先”？
 
-对于这个问题，Luke Wroblewski 给出我们三点原因：
+开发人员把精力集中到最重要的功能之上
 
-1. 移动设备爆炸式增长
-
-2. 强迫开发人员把精力聚焦到应用的核心功能之上
-
-3. 拓展你的能力
-
-以上三点，笔者认为第一个是最最重要的原因。移动设备，尤其是智能手机的普遍使用，把人们变成了 “低头族”，改变了人们的日常生活、工作和思维方式。
-
-![](images/mobile-first/mobile-children.jpg)
-
-这种大家有目共睹的巨大变革，给人们带来了新的机遇，也迫使企业和公司改变了他们的工作策略，默认对手机用户提供友好的服务体验，而且不遗余力的培养用户在手机上面的操作习惯。
-
-就拿最近两天刚发生的一件事为例，一个名为 [TNW](http://thenextweb.com/) 的网站上有一篇[文章](http://thenextweb.com/opinion/2015/06/12/the-new-york-times-wisely-blocks-staff-from-viewing-its-desktop-homepage/)爆料说，灰色女士（纽约时报的戏称）正成为一个时髦的现代女性，她喜欢4.7英寸视网膜屏幕胜过她的28英寸桌面显示器。
-事情起因是这样的，纽约时报因其用户流量一半以上都来自移动设备，于是决定，阻止员工查看其桌面主页，而员工只能借助智能手机或平板电脑来访问其官方网站。真是一个明智的决策！
 
 ### “移动优先” 实例
 
+<!-- http://book.haoduoshipin.com -->
+<!-- /go-responsive/demo/mobile.html -->
 
 <!-- http://bradfrost.com/demo/mobile-first/ -->
 
