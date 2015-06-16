@@ -17,7 +17,7 @@ title: go responsive
       </p>
       <a href="javascript:;" class="read-btn">购买电子书</a>
     </div>
-    <img alt="responsive" class="book-image" src="images/index/responsive.jpg"/>
+    <img alt="responsive" class="book-image" src="images/index/water-1980.jpg"/>
   </div>
 </section>
 <div class="divider">
