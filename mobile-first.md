@@ -79,7 +79,7 @@ Luke 提出这个观点的时候，其实讨论了手机 APP 的各种优势，�
 ### 参考链接
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
-
+- [按钮样式来自 materializecss](http://materializecss.com/buttons.html)
 - <https://web3canvas.com/what-is-mobile-first-responsive-design/>
 
 - [Creating a Mobile-First Responsive Web Design](http://www.html5rocks.com/en/mobile/responsivedesign/)
