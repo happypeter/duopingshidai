@@ -19,22 +19,42 @@ title: 媒体查询
 
 {% highlight html %}
 <!-- Separate CSS File -->
-<link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
+<link href="main.css" rel="stylesheet" media="screen and (min-width: 480px)">
 {% endhighlight %}
 
 {% highlight css %}
 /* @media Rule */
-@media all and (max-width: 1024px) {...}
+@media screen and (min-width: 480px) {...}
 
 /* @import Rule */
-@import url(styles.css) all and (max-width: 1024px) {...}
+@import url(main.css) screen and (min-width: 480px) {...}
 {% endhighlight %}
 
-每一个媒体查询可能都会包含一个媒体类型，紧接着是一个或多个表达式。常见的媒体类型包括 all、screen、print、tv 和 braille。HTML5 规范包含了新的媒体类型，甚至包括 3D 眼镜。若媒体查询中没有指定媒体类型，则默认为 screen。
+每一个媒体查询可能会包含一个媒体类型，紧接着是一个或多个表达式。常见的媒体类型包括 all、screen、print、tv 和 braille。HTML5 规范包含了新的媒体类型，甚至包括三维眼镜。若媒体查询中没有指定媒体类型，则默认为 screen。
 
-媒体查询表达式可能包括不同的媒体特性和数值，然后计算结果是 true 或 false。当一个媒体特性和数值的结果是 true 的话，就会应用其包裹的样式。如果媒体特性和数值结果是 false，则忽略其包裹的样式。
+媒体查询表达式可能包括不同的媒体特性与值，表达式计算结果是 true 或 false。若结果为 true 的话，就会应用其包裹的样式。若结果为 false，则忽略其包裹的样式。
 
-### 媒体查询运算符
+### 媒体查询操作符
+
+媒体查询中的逻辑操作符可以构建强大的表达式。共有三个逻辑操作符，分布是 and、not 和 only。
+
+在媒体查询中使用 and 逻辑操作符可以添加新的表达式，并且浏览器或设备必须满足列出的所有条件，才能执行相关的 css 样式。多个媒体查询之间用逗号分隔开。举例说明，若选择宽度介于800像素到1024像素之间的所有媒体类型，该如何表示呢？
+
+{% highlight css %}
+@media all and (min-width: 800px) and (max-width: 1024px) {...}
+{% endhighlight %}
+
+not 逻辑操作符对后面的表达式取反操作。下面的示例，css 样式将应用于非彩色屏幕的设备
+
+{% highlight %}
+@media not screen and (color) {...}
+{% endhighlight %}
+
+only 逻辑操作符是一个新出现的运算符，使用 HTML4 算法的浏览器并不支持它，这样一些较老的，不支持媒体查询的浏览器就不能使用给定的样式了。
+
+{% highlight %}
+@media only screen and (color) {...}
+{% endhighlight %}
 
 <!-- https://teamtreehouse.com/library/responsive-layouts/media-queries/media-query-review -->
 
