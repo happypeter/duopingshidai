@@ -44,8 +44,6 @@ title: 移动优先
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
 
-- <http://designshack.net/articles/css/mobilefirst/>
-
 - <https://web3canvas.com/what-is-mobile-first-responsive-design/>
 
 - <http://www.lukew.com/ff/entry.asp?933>
