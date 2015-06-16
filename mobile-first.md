@@ -99,11 +99,7 @@ Luke 提出这个观点的时候，其实讨论了手机 APP 的各种优势，�
 {% endhighlight %}
 
 
-[最终的 demo 在这里](demo/navbar/) 。
-
-
-
-另外可以看看别人做的一个[功能更为丰富的一个例子](http://bradfrost.com/demo/mobile-first/) 。
+[实际代码在这里](demo/navbar/) 。 另外可以看看别人做的一个[功能更为丰富的一个例子](http://bradfrost.com/demo/mobile-first/) 。
 
 ### Peter 的结语
 
