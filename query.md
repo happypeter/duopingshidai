@@ -46,17 +46,29 @@ title: 媒体查询
 
 not 逻辑操作符对后面的表达式取反操作。下面的示例，css 样式将应用于非彩色屏幕的设备
 
-{% highlight %}
+{% highlight css %}
 @media not screen and (color) {...}
 {% endhighlight %}
 
 only 逻辑操作符是一个新出现的运算符，使用 HTML4 算法的浏览器并不支持它，这样一些较老的，不支持媒体查询的浏览器就不能使用给定的样式了。
 
-{% highlight %}
+{% highlight css %}
 @media only screen and (color) {...}
 {% endhighlight %}
 
-<!-- https://teamtreehouse.com/library/responsive-layouts/media-queries/media-query-review -->
+当使用 not 和 only 逻辑操作符的时候，如果没有指明媒体类型，则默认值为 all。
+
+另外媒体查询是大小写敏感的，若媒体查询语句中包含未知名媒体的媒体类型，则计算结果为 false。
+
+### 媒体特征
+
+虽然已经知道了媒体查询的语法，逻辑操作符的用途，再来学习一下，真正起作用的媒体特征（ media features ）。在媒体查询表达式中，媒体特征能够识别设备的属性。
+
+高度 & 宽度媒体特征
+
+最常见的一个媒体特征，就是用来确定一个设备或浏览器视窗（ viewport ）的高度和宽度。借助 height、width、device-height、device-width 媒体特征可以得到浏览器视窗（ viewport ）的高度和宽度。其中的每一个媒体特征都可以加上前缀 min 或 max 标识符，从而构建一个新特征，比如 min-width 或 max-device-width。
+
+这个 height 和 width 特征来自于视窗渲染区域的高度和宽度，比方说浏览器窗口。另一面，device-height 和 device-width 特征是基于输出设备的高度和宽度，可能要比实际的渲染区域大一些。这些代表高度和宽度的媒体特征，其值既可以用相对单位表示，也可以用绝对单位表示。
 
 ### 参考资料
 
