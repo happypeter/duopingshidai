@@ -18,7 +18,9 @@ title: 写在多屏时代
 
 ### “响应式” 这个词怎么来的？
 
-2010年5月下旬，设计师 Ethan Marcotte，在 ALA 期刊上发布了一篇名为 [Responsive Web Design 的文章](http://alistapart.com/article/responsive-web-design/)。 从此响应式网页设计（RWD）的身影就出现在了公众面前。
+![](images/forward/responsive-term.png)
+
+2010年5月下旬，设计师 Ethan Marcotte，在 ALA 期刊上发布了一篇名为 [Responsive Web Design 的文章](http://alistapart.com/article/responsive-web-design/)。 从此响应式网页设计（ RWD ）的身影就出现在了公众面前。
 文章提到，“响应式” 这个词借用自建筑学领域，原本指的是建筑物本身会 “响应” 实际的使用情况，来自我调整。到 web 开发领域，“响应式” 的意思就变成了，我们的页面会 “响应” 用户的设备尺寸。就像 Edthan 所说的。另外，Edthan 还专门写过一本书，就叫 [响应式设计](http://abookapart.com/products/responsive-web-design) ，是绝对值得一读的。
 
 >This is our way forward. Rather than tailoring disconnected designs to each of an ever-increasing number of web devices, we can treat them as facets of the same experience.
@@ -28,11 +30,10 @@ title: 写在多屏时代
 
 换句话说，每个设备上都会去追求最佳的用户体验，设计会自动适应各个设备。在过去的时代，设计师精确的知道自己的媒介材质，比如一张 A4 纸张，一个名片，或者一张海报。但是在我们这个多屏时代，网页设计必须有这样的思维，我们要为“任意尺寸”而去设计。
 
-![](images/forward/responsive-term.png)
 
 ### 听起来复杂，实则不然
 
-其实响应式，只是乍看起来很绕人，其实是有一些很简单的基本原则的。弹性布局，弹性媒体，和 Media-query 是做响应式设计的最重要的三个组件，后面我们都会结合实际代码来做详细介绍的。
+响应式网站设计，只是乍看起来很绕人，其实是有一些很简单的基本原则的。弹性布局，弹性媒体，和 Media-query 是做响应式设计的最重要的三个组件，后面我们都会结合实际代码来做详细介绍的。
 
 弹性布局，弹性媒体的叫法来自 <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/> 。
 在[Ethan 的文章中](http://alistapart.com/article/responsive-web-design/)这 “弹性布局”（ flexible layout ）没有提，而是被称为 “流体网格”（ fliud grid ），不过意思是差不多的。
