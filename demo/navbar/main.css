@@ -1,0 +1,28 @@
+
+body {
+  color: #fff;
+  font-family: sans-serif;
+}
+.navbar {
+  background-color: rgb(238, 110, 115);
+  height: 200px;
+}
+.content {
+  background-color: rgb(38, 166, 154);
+  height: 200px;
+}
+
+@media all and (min-width: 420px) {
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+  }
+  .content {
+    float: left;
+    width: 70%;
+  }
+  .navbar {
+    float: right;
+    width: 30%;
+  }
+}
