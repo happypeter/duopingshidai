@@ -5,11 +5,16 @@ body {
 }
 .navbar {
   background-color: rgb(238, 110, 115);
-  height: 200px;
 }
 .content {
   background-color: rgb(38, 166, 154);
-  height: 200px;
+}
+.navbar, .content {
+  padding-top: 30px;
+  height: 100px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
 }
 
 @media all and (min-width: 420px) {
@@ -19,7 +24,7 @@ body {
   }
   .content {
     float: left;
-    width: 70%;
+    width: 65%;
   }
   .navbar {
     float: right;
