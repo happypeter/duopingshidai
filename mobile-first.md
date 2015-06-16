@@ -75,7 +75,31 @@ Luke 提出这个观点的时候，其实讨论了手机 APP 的各种优势，�
 ![](images/mobile-first/desktop-layout.png)
 
 
-从这个例子，也一样可以看出，把手机版样式作为默认样式的好处。 [demo 在这里](demo/navbar/) 。
+从这个例子，也一样可以看出，把手机版样式作为默认样式的好处。简化版代码如下
+
+{% highlight css %}
+
+.navbar {
+  background-color: rgb(238, 110, 115);
+}
+.content {
+  background-color: rgb(38, 166, 154);
+}
+
+@media all and (min-width: 420px) {
+  .content {
+    float: left;
+    width: 65%;
+  }
+  .navbar {
+    float: right;
+    width: 30%;
+  }
+}
+{% endhighlight %}
+
+
+[最终的 demo 在这里](demo/navbar/) 。
 
 
 
