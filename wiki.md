@@ -21,3 +21,5 @@ mobile first 的工作流，多看大牛博客，可以大段引用原话
 
 
 关于 <meta name="viewport" content="width=device-width, initial-scale=1"> 这一行怎么写，还是 bootstrap 上最权威一些，见 <http://getbootstrap.com/css/> 。
+要不要禁用用户缩放功能呢？见 http://www.html5rocks.com/en/mobile/responsivedesign/
+It's important to note that we're not disabling the user's ability to zoom the page (which you could do by adding user-scalable=no to the content attribute), even though we're optimizing the content for small screens. It's recommended to keep user zooming enabled to keep things as accessible as possible. However, there are use cases to disable user-zooming, such as if you're including fixed positioned elements.
