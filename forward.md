@@ -38,7 +38,6 @@ title: 写在多屏时代
 弹性布局，弹性媒体的叫法来自 <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/> 。
 在[Ethan 的文章中](http://alistapart.com/article/responsive-web-design/)这 “弹性布局”（ flexible layout ）没有提，而是被称为 “流体网格”（ fliud grid ），不过意思是差不多的。
 
-
 所谓的弹性媒体，其实主要就是针对图片而言，也包括视频。
 
 ### 为什么写这本书？
