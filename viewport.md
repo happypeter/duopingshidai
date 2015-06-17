@@ -38,3 +38,35 @@ user-scalable 属性值设为 no，则禁用缩放功能。若 user-scalable 属
 {% highlight html %}
 <meta name="viewport" content="user-scalable=yes">
 {% endhighlight %}
+
+### 视窗分辨率
+
+让浏览器基于视窗缩放值来决定如何缩放网站通常是管用的。但是当需要更精确的控制时，特别是超出了设备的分辨率，就会用到 target-densitydpi 属性。它的属性值包括
+device-dpi、high-dpi、medium-dpi、low-dpi 或一个实际的 DPI 数值。
+
+虽然很少使用 target-densitydpi 视窗属性，但是当需要缩放到像素级别的时候就尤为重要了。
+
+{% highlight html %}
+<meta name="viewport" content="target-densitydpi=device-dpi">
+{% endhighlight %}
+
+### 整合视窗属性
+
+这个 viewport 元标签允许在 content 属性值之内，同时设置多个视窗属性，它们之间用逗号分隔开。下面这个例子就同时设置了 width 和 initial-scale 属性。
+
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endhighlight %}
+
+### CSS 视窗规则
+
+因为 viewport 元标签主要和网站的风格样式打交道，所以建议把它从 html 元标签中移到 CSS 样式中，变成 @viewport 规则。
+
+目前一些浏览器虽然已经实现了 @viewport 规则，不过整个浏览器家族对它支持并不是很好。看一下，@viewport 规则如何编写：
+
+{% highlight html %}
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+{% endhighlight %}
