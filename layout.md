@@ -27,7 +27,7 @@ target / parent = result
 </div>
 {% endhighlight %}
 
-一个父元素 main, 包含了两个子元素，子元素 content 居左，另一个子元素 menu 居右，[查看效果](http://book.haoduoshipin.com/go-responsive/demo/fixed-layout.html)。
+一个父元素 main, 包含了两个子元素，子元素 content 居左，另一个子元素 menu 居右，[查看效果](http://book.haoduoshipin.com/go-responsive/demo/layout/fixed.html)。
 为了叙述方便，抽取了一些 css 样式：
 
 {% highlight css %}
@@ -58,7 +58,7 @@ target / parent = result
 
 注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。
 
-[点击这里](http://book.haoduoshipin.com/go-responsive/demo/flexible-layout.html)，查看弹性布局效果。当然，你需要调整浏览器窗口的大小才能看到变化。
+[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible.html)，查看弹性布局效果。当然，你需要调整浏览器窗口的大小才能看到变化。
 
 知道了弹性布局的概念，和弹性网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站布局按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对 min-width、max-width、 min-height、和 max-height 属性值采用相对长度单位。
 
@@ -106,7 +106,6 @@ iframe {
 }
 {% endhighlight %}
 
-<!-- https://teamtreehouse.com/library/responsive-layouts/responsive-theory/thinking-in-relative-units -->
 ### 弹性媒介 demo
 
 ### bootstrap 自带流体网格
