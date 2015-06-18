@@ -78,7 +78,33 @@ img, video, canvas {
 
 ### 弹性嵌入式媒介
 
+不幸的是，这个 max-width 属性并不适用所有的媒介应用场景，尤其是对于嵌入式媒介，像通过 <iframe> 标签 或 在 HTML5 中使用 <video> 标签嵌入的视频，这种情况下，仅仅一个 max-width 属性是不能解决问题的。
 
+实现嵌入式媒介的响应式布局，嵌入式媒介在其父元素中的摆放位置，需要采用绝对定位方式确定。父元素的宽度要设置为 100%，这样父元素就能基于视窗宽度来调整其大小。另外，为了触发 IE 浏览器的 hasLayout 机制，父元素的高度需要设置为0。
+
+父元素的下内边距 padding-bottom 的属性值要与视频的长宽比保持一致。这是为了让父元素的高度与其宽度是相称的。记得前面那个响应式设计公式吗？ 如果一个视频的长宽比是 16:9，16除以9等于 .5625，这样父元素下内边距为56.25%。设置下内边距而不是上内边距是为了专门阻止 IE 5.5 把父元素当做绝对定位元素看待。
+
+{% highlight html %}
+<figure>
+  <iframe src="https://www.youtube.com/embed/4Fqg43ozz7A"></iframe>
+</figure>
+{% endhighlight %}
+
+{% highlight css %}
+figure {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  width: 100%;
+}
+iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+{% endhighlight %}
 
 <!-- https://teamtreehouse.com/library/responsive-layouts/responsive-theory/thinking-in-relative-units -->
 
