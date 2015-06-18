@@ -74,6 +74,8 @@ img, video, canvas {
 }
 {% endhighlight %}
 
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image.html)
+
 ### 弹性媒介 demo
 
 ### 弹性嵌入式媒介
