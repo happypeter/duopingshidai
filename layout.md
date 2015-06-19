@@ -74,9 +74,9 @@ img, video, canvas {
 }
 {% endhighlight %}
 
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image.html)
-
 ### 弹性媒介 demo
+
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image.html)
 
 ### 弹性嵌入式媒介
 
@@ -87,19 +87,19 @@ img, video, canvas {
 父元素的下内边距 padding-bottom 的属性值要与视频的长宽比保持一致。这是为了让父元素的高度与其宽度是相称的。记得前面那个响应式设计公式吗？ 如果一个视频的长宽比是 16:9，9除以16等于 .5625，这样父元素下内边距为56.25%。设置下内边距而不是上内边距是为了专门阻止 IE 5.5 把父元素当做绝对定位元素看待。
 
 {% highlight html %}
-<figure>
-  <iframe src="https://www.youtube.com/embed/4Fqg43ozz7A"></iframe>
-</figure>
+<div class="video">
+  <video src="video/code.mov"></video>
+</div>
 {% endhighlight %}
 
 {% highlight css %}
-figure {
+.video {
   height: 0;
   padding-bottom: 56.25%; /* 16:9 */
   position: relative;
   width: 100%;
 }
-iframe {
+video {
   height: 100%;
   left: 0;
   position: absolute;
@@ -110,9 +110,12 @@ iframe {
 
 ### 弹性媒介 demo
 
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/video.html)
+
 ### bootstrap 自带流体网格
 
 ### flexbox
 
-- 弹性布局和媒介的信息
-  http://learn.shayhowe.com/advanced-html-css/responsive-web-design/
+### 参考链接
+
+- <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
