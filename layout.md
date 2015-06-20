@@ -43,7 +43,7 @@ CSS3 中引入了一个新的相对长度 rem（ root em 的简写 ），它与 
 </div>
 {% endhighlight %}
 
-一个父元素 main, 包含了两个子元素，子元素 content 居左，另一个子元素 menu 居右，[查看效果](http://book.haoduoshipin.com/go-responsive/demo/layout/fixed.html)。
+一个父元素 main, 包含了两个子元素，子元素 content 居左，另一个子元素 menu 居右，[查看效果](http://book.haoduoshipin.com/go-responsive/demo/layout/fixed/index.html)。
 为了叙述方便，抽取了一些 CSS 样式：
 
 {% highlight css %}
@@ -72,7 +72,7 @@ CSS3 中引入了一个新的相对长度 rem（ root em 的简写 ），它与 
 }
 {% endhighlight %}
 
-注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible.html)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。
+注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible/index.html)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。
 
 
 
@@ -94,7 +94,7 @@ img, video, canvas {
 {% endhighlight %}
 
 
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image.html)
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image/index.html)
 
 ![](images/layout/pass.jpg)
 
@@ -129,7 +129,7 @@ video {
 {% endhighlight %}
 
 
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/video.html)
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/video/index.html)
 
 ![](images/layout/code.png)
 
