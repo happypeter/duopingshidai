@@ -21,8 +21,6 @@ target / parent = result
 
 ### 如何选择相对长度单位？
 
-上面的例子中使用了百分比 % 做为相对长度单位，那可不可以用 em 或者 rem 来代替呢？ 答案是否定的。
-
 任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。
 
 em 长度单位经常用来创建可伸缩的页面布局，保持页面的垂直节奏，即使用户改变了字体的大小。CSS 属性 line-height font-size margin-bottom 和 margin-top 经常使用 em 单位。
@@ -33,7 +31,7 @@ CSS3 中引入了一个新的相对长度 rem（ root em 的简写 ），它与 
 
 ### 流体网格
 
-说到弹性布局，自然要提到流体网格（ fluid grid ）。流体网格使用相对长度单位，最常用的是百分比和 em 单位，还有一个是 rem。流体网格的属性值，比如 width、margin
+说到弹性布局，自然要提到流体网格（ fluid grid ）。流体网格使用相对长度单位，最常用的是百分比和 em 单位。流体网格的属性值，比如 width、margin
 或者 padding 都是用相对长度表示的。
 
 接下来看一个应用上面流体网格公式的例子，如何把一个固定宽度的两栏页面转变成一个弹性布局页面。
@@ -140,3 +138,5 @@ video {
 ### 参考链接
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
+
+- <https://medium.com/@simurai/sizing-web-components-8f433689736f>

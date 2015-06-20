@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>em</title>
+  <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: #ddd;
+    font-size: 100%; /* font-size: 16px; */
+  }
+  .main {
+    margin: 30px auto 0;
+    width: 60%;
+    padding: 3.333%;
+    background-color: #fff;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 1.5em;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 1.5em;
+  }
+  @media all and (max-width: 780px) {
+    p{font-size: 16px;}
+    h1{font-size: 20px;}
+  }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1>Potential issues</h1>
+    <p>Since browsers still snap to whole pixels when using EMs, it could have some rounding errors so that it’s off by 1px. Not a big problem with larger sizes, but you might notice it when going really small.</p>
+    <p>Wrapping your head around how the font-size translates to the real width/height might not be that easy. For example if you set a component to a font-size of 20px, it doesn’t mean its height is also 20px. So if you wanna change it to a specific size, you need to calculate it or just try it out.</p>
+  </div>
+</body>
+</html>
+
+<!--
+浏览器默认字体大小是 16px，1em=16px。
+chrome 浏览器中，h1 默认字体大小是 2em，转换为像素单位是 32px。
+若在本例中，不指定 h1 元素的字体大小，让其使用默认值的情况下，设置 h1 的间距为 5em，则等价于 160px，而不是 80px。原因是 em 对应的基数已经改变了，现在的 1em=32px。
+-->
+
+<!--
+调整浏览器窗口大小，其默认字体大小是不会改变的，仍然为 16px。
+-->
+
+
+
