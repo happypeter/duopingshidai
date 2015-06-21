@@ -19,19 +19,9 @@ target / parent = result
 
 上面这个公式的含义是，用一个元素的宽度（ target ）除以它的父元素的宽度（ parent ），那得到的计算结果（ result ）就是这个元素的相对宽度。
 
-### 如何选择相对长度单位？
-
-任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。
-
-em 长度单位经常用来创建可伸缩的页面布局，保持页面的垂直节奏，即使用户改变了字体的大小。CSS 属性 line-height font-size margin-bottom 和 margin-top 经常使用 em 单位。
-
-CSS3 中引入了一个新的相对长度 rem（ root em 的简写 ），它与 em 相似，只有一个区别： em 是相对于父元素的 font-size 而言，rem 是相对于 `<html>` 根元素的 font-size 而言。这样一旦设置了一个基本字体大小，定义其它的派生字体大小就容易了，比 em 使用起来简单。
-
-对于响应式网站，水平方向为流体网格布局，那宽度、左右间距和左右内边距的长度单位采用百分比。像高度、上下间距以及上下内边距，还有字体大小等与垂直方向相关的属性则应该使用 em 或者 rem 单位。
-
 ### 流体网格
 
-说到弹性布局，自然要提到流体网格（ fluid grid ）。流体网格使用相对长度单位，最常用的是百分比和 em 单位。流体网格的属性值，比如 width、margin
+说到弹性布局，自然要提到流体网格（ fluid grid ）。流体网格使用相对长度单位，最常用的是百分比或 em 单位。流体网格的属性值，比如 width、margin
 或者 padding 都是用相对长度表示的。
 
 接下来看一个应用上面流体网格公式的例子，如何把一个固定宽度的两栏页面转变成一个弹性布局页面。
@@ -74,14 +64,12 @@ CSS3 中引入了一个新的相对长度 rem（ root em 的简写 ），它与 
 
 注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible/index.html)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。
 
-
-
-知道了弹性布局的概念，和流体网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站内容按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对
+知道了弹性布局的概念和流体网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站内容按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对
 min-width、max-width、 min-height 和 max-height 属性值采用相对长度单位。
 
-虽然现在能创建一个动态的网站了，但是要达到完美，还需要做一些事情。比如说，网站中的图片、视频、Flash 动画等等，在变为响应式的时候，就不能简单的按照流体网格计算公式来变化了。
-
 ### 弹性媒介
+
+虽然现在能创建一个动态的网站了，但是要达到完美，还需要做一些事情。比如说，网站中的图片、视频、Flash 动画等等，在变为响应式的时候，就不能简单的按照流体网格计算公式来变化了。
 
 接下来说一说，响应式网站设计的另一重要部分，弹性媒介。网站上的图片、视频、Flash 等就是所谓的媒介。随着浏览器窗口大小的改变，网站上媒介的布局不一定变得很合适，有时候它们会超出其容器的界限，当浏览器窗口变得比较小的情况下，这时页面看起来会很糟糕。因此图片、视频和其它媒介类型应该具备可伸缩性，能根据浏览器窗口的大小，自动调整自身尺寸，保证页面布局整齐一致。
 
@@ -93,8 +81,7 @@ img, video, canvas {
 }
 {% endhighlight %}
 
-
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image/index.html)
+本书作者身在秦皇岛，于是就从网上找了一张山海关的图片来做演示。[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image/index.html)
 
 ![](images/layout/pass.jpg)
 
@@ -128,10 +115,43 @@ video {
 }
 {% endhighlight %}
 
-
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/video/index.html)
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/video/index.html)，视频片段来自
 
 ![](images/layout/code.png)
+
+### 相对长度单位
+
+自从 CSS3 问世之后，相对长度家族成员也壮大起来，除了已有的 % 和 em 单位之外，新加入了 rem 单位，还增加了一组相对视窗长度单位如
+vw、vh、vmin 和 vmax。目前浏览器对这些新加入成员的支持还不太好，所以它们还没有普遍使用起来。下面简单介绍一下 em、rem 还有百分比。
+
+先聊聊 em 单位。em 是相对于其所在元素的字体而言的。
+
+若使用 em 单位的元素定义了 font-size 为 12px，则此时 1em == 12px，那 2em == 24px；若没有，则找其父元素的字体大小，依次类推直到
+html 元素；若整个页面没有定义字体大小，而是使用浏览器默认字体大小 16px，则 1em == 16px。
+
+{% highlight html %}
+<div class="main">
+  <div class="content">em relative length unit</div>
+</div>
+{% endhighlight %}
+
+{% highlight html %}
+.main {
+  font-size: 20px;
+}
+.content {
+  margin: 1.5em; /* 1em == 20px */
+}
+{% endhighlight %}
+
+这样若某些 CSS 属性使用了 em 单位，只要改变与其相关联的字体大小，就能改变这些属性值。
+
+再稍微说一下 rem（ root em 的简写 ），它与 em 相似，但 rem 仅仅是相对于 html 根元素的 font-size
+而言的。这样一旦设置了一个基本字体大小，定义其它长度就容易了，比 em 使用起来简单。不足之处就是，牵一发而动全身。
+
+对于百分比，就是根据 Ethan 的公式，得到的结果乘以 100%。既然对这三个相对长度单位有了一定了解，那在响应式网站中如何使用它们呢？
+
+一般而言，对于响应式网站，水平方向为流体网格布局，那宽度、左右间距和左右内边距的长度自然采用百分比。像高度、上下间距，还有字体大小等与垂直方向相关的属性则应该使用 em 或者 rem 单位。
 
 ### Flexbox 布局
 
