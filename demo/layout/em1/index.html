@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>em</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css">
+</head>
+<body>
+  <div class="admin">
+    <input type="range" min="10" max="35" step="1" value="20" id="slider">
+
+    <p>Base unit is: <output id="op">20px</output><p>
+  </div>
+
+  <div class="Component" id="mod">
+
+    <h2>Component Title</h2>
+    <img src="http://placekitten.com/g/250/250" alt="Kitten">
+    <p><strong>Use the range slider above</strong>.<br>The size of each element inside this module is controlled by a single unit: The <code>font-size</code>, which acts as a "root" for our em units, making everything inside the component proportionally resizable.</p>
+
+  </div>
+
+  <p class="p">Demo by Louis Lazaris. <a href="http://www.sitepoint.com/power-em-units-css/">See article</a> and <a href="https://medium.com/front-end-development/8f433689736f">original inspiration</a>.</p>
+
+  <script>
+  var slider = document.getElementById('slider'),
+      mod = document.getElementById('mod'),
+      op = document.getElementById('op');
+
+  slider.onchange = function () {
+    mod.style.fontSize = this.value + 'px';
+    op.innerHTML = this.value + 'px';
+  }
+  </script>
+</body>
+</html>

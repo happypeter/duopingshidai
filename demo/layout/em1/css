@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 120px 0 0 0;
+  font-family: Arial, sans-serif;
+  word-break: break-word;
+}
+
+.component {
+  font-size: 20px;
+  padding: 1em;
+  max-width: 30em;
+  border: solid 2px #ccc;
+  margin: 0 auto;
+  color: #666;
+  border-radius: 1em 0 1em 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.component:after {
+  content: '';
+  display: block;
+  border-radius: 50% 0 50% 50%;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  background: #bbb;
+}
+
+.component h2 {
+  font-size: 2em;
+  margin: 0 0 .4em;
+}
+
+.component img {
+  max-width: 100%;
+  height: auto;
+  border: solid .3em #ccc;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.component p {
+  font-size: 1em;
+  margin: 1em 0 0 0;
+  text-align: left;
+}
+input[type="range"] {
+  margin: 20px auto;
+  display: block;
+}
+.admin {
+  position: fixed;
+  background: #eee;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+p {
+  text-align: center;
+}
+.p {
+  font-size: 14px;
+  padding-top: 100px;
+}
+@media screen and (max-width: 700px) {
+  .component {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .component {
+    font-size: 10px;
+    width: auto;
+  }
+}
