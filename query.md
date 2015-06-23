@@ -141,7 +141,7 @@ CSS3-MediaQueries.js 是一个功能比较全，代码量比较大的 js 库，�
 这时我们就可以添加媒体查询，对于宽度小于480像素的视窗，我们可以改变页面布局，清除浮动，调整
 content 和 menu 区块的宽度以及字体大小。另外，我们还会用 em 相对长度单位替换 px 绝对单位，再次领略 em 的妙用。
 
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/query/index.html)
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/query/)
 
 ### 如何确定临界点（ Break Point ）
 
