@@ -70,3 +70,7 @@ device-dpi、high-dpi、medium-dpi、low-dpi 或一个实际的 DPI 数值。
   zoom: 1;
 }
 {% endhighlight %}
+
+### 参考
+
+* <http://www.quirksmode.org/mobile/viewports.html>
