@@ -40,7 +40,7 @@ title: 写在多屏时代
 
 所谓的弹性媒体，其实主要就是针对图片而言，也包括视频。
 
-![](forward/res.png)
+![](images/forward/res.png)
 
 ### 为什么写这本书？
 
