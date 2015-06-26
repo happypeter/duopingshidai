@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>layout</title>
+  <style>
+  body {
+    color: #fff;
+    font-family: sans-serif;
+  }
+  .container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #fff;
+    max-width: 900px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  .content, .navbar {
+    margin: 30px 20px;
+    text-align: center;
+    line-height: 130px;
+  }
+  .content {
+    width: 60%;
+    height: 130px;
+    background-color: #93675C;
+  }
+  .navbar {
+    width: 30%;
+    height: 130px;
+    background-color: #1EAAF1;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">导航</div>
+    <div class="content">内容</div>
+  </div>
+</body>
+</html>

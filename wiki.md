@@ -1,5 +1,7 @@
 - demo 用色
   - https://dribbble.com/shots/1790652-Google-Material-exploration?list=searches&tag=material_design&offset=2
+  - content >> background-color: #93675C;
+  - navbar >> background-color: #1EAAF1;
 
 http://alistapart.com/article/responsive-web-design/
 
