@@ -169,6 +169,9 @@ flex 容器，当空间变大时，其中的子元素也会随之扩大； 当�
 
 Flexbox 是一个非常新颖的想法，它是如何工作的？ 什么时候应该使用它？ 弄明白这些问题，我们还是举例说明吧。
 
+[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)
+
+
 ### 参考链接
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
