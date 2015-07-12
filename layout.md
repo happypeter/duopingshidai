@@ -62,10 +62,10 @@ target / parent = result
 }
 {% endhighlight %}
 
-注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible/)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。
+注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible/)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。知道了弹性布局的概念和流体网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站内容按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对 min-width、max-width、 min-height 和 max-height 属性值采用相对长度单位。
 
-知道了弹性布局的概念和流体网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站内容按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对
-min-width、max-width、 min-height 和 max-height 属性值采用相对长度单位。类似于 Bootstrap 这样的 css 框架，会自带[流体网格](http://getbootstrap.com/2.3.2/scaffolding.html) 。
+
+[html5rocks](http://www.html5rocks.com/en/) 的首页文章列表就是流体网格应用的一个典型例子。另外，类似于 Bootstrap 这样的 css 框架，会自带[流体网格](http://getbootstrap.com/2.3.2/scaffolding.html) 。
 
 ### 弹性媒介
 
@@ -130,14 +130,12 @@ html 元素；若整个页面没有定义字体大小，而是使用浏览器默
 flex 布局的设计思想是这样的，让一个容器（ flex 容器）能够自动调整容器内元素（子元素）的宽度、高度以及顺序，并尽可能以最佳的方式来适应容器自身空间大小。也就是说，一个
 flex 容器，当空间变大时，其中的子元素也会随之扩大； 当空间变小时，其中的子元素也会随之缩小。无论容器如何变化，子元素都能自如缩放。
 
-注意： Flexbox 布局最适用于网站中的组件，和小规模布局，而网格布局则用于大规模布局。另外，由于它的浏览器支持[从 IE10 开始](http://caniuse.com/#search=flexbox)，所以使用的时候也是要谨慎的。
-
-Flexbox 是如何工作的？ 什么时候应该使用它？ 弄明白这些问题，我们还是举例说明吧。
-
-[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)
+注意： Flexbox 布局最适用于网站中的组件，和小规模布局，而网格布局则用于大规模布局。另外，由于它的浏览器支持[从 IE10 开始](http://caniuse.com/#search=flexbox)，所以使用的时候也是要谨慎的。 [查看 Flexbox 的一个 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)。
 
 ### 参考链接
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
 - <https://medium.com/@simurai/sizing-web-components-8f433689736f>
 - <http://clearleft.com/thinks/anequalheightgridusingflexbox/>
+- [google&udacity 响应式课程的 fluid grid 介绍](https://www.udacity.com/course/viewer#!/c-ud893/l-3533879576/m-3618968538)
+- [google&udacity 响应式课程的 Flexbox 介绍](https://www.udacity.com/course/viewer#!/c-ud893/l-3533879576/m-3604458542)
