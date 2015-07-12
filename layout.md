@@ -130,18 +130,14 @@ html 元素；若整个页面没有定义字体大小，而是使用浏览器默
 flex 布局的设计思想是这样的，让一个容器（ flex 容器）能够自动调整容器内元素（子元素）的宽度、高度以及顺序，并尽可能以最佳的方式来适应容器自身空间大小。也就是说，一个
 flex 容器，当空间变大时，其中的子元素也会随之扩大； 当空间变小时，其中的子元素也会随之缩小。无论容器如何变化，子元素都能自如缩放。
 
-最重要的是，相对于常规布局，如块布局是基于垂直方向的，而 flexbox 的布局方向是不可知的。虽然 flexbox 布局在小网站中，表现很好，但是由于它们缺乏灵活性，对比较大的或复杂的网站（尤其是遇到取向改变，调整大小，伸展，收缩等问题的时候）支持并不友好。
+注意： Flexbox 布局最适用于网站中的组件，和小规模布局，而网格布局则用于大规模布局。另外，由于它的浏览器支持[从 IE10 开始](http://caniuse.com/#search=flexbox)，所以使用的时候也是要谨慎的。
 
-注意： Flexbox 布局最适用于网站中的组件，和小规模布局，而网格布局则用于大规模布局。
-
-Flexbox 是一个非常新颖的想法，它是如何工作的？ 什么时候应该使用它？ 弄明白这些问题，我们还是举例说明吧。
+Flexbox 是如何工作的？ 什么时候应该使用它？ 弄明白这些问题，我们还是举例说明吧。
 
 [查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)
-
 
 ### 参考链接
 
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
-
 - <https://medium.com/@simurai/sizing-web-components-8f433689736f>
-http://clearleft.com/thinks/anequalheightgridusingflexbox/
+- <http://clearleft.com/thinks/anequalheightgridusingflexbox/>
