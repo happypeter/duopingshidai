@@ -3,6 +3,25 @@ layout: book
 title: viewport
 ---
 
+
+<!-- Take a look at the fourth answer. Without a viewport set, your content may be scaled by the browser.
+https://www.udacity.com/course/viewer#!/c-ud893/l-3494350031/e-3566519000/m-3565149257
+
+现在知道为啥要设置 viewport 了
+ -->
+
+
+<!--
+https://www.udacity.com/course/viewer#!/c-ud893/l-3494350031/m-3576408597
+
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+的详细介绍在这里。
+ -->
+
+<!-- https://www.udacity.com/course/viewer#!/c-ud893/l-3494350031/m-3495129024
+
+DIP: device independent pixel -->
+
 通常，现在的移动设备可以很美观的显示网站内容，从而用户可以在手机上愉悦的浏览网页。但有时候移动设备也需要一点帮助，尤其是在要确认一个网站的视窗大小、缩放和分辨率的情况下。为了弥补这一不足，苹果公司发明了
 viewport 元标签（ meta tag ）。
 

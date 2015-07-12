@@ -3,7 +3,7 @@ layout: book
 title: 媒体查询
 ---
 
-响应式网站设计只有弹性布局这一个技巧是不够用的。有时候浏览器的视窗宽度可能会太小，小到甚至按比例缩放也会出现特别小的栏框，以至于网站内容不能有效地显示。尤其是当网站布局变得很小或很大的时候，网站上的文字可能会变得难以辨认，布局也可能会被打乱。这时候，media queries 就派上用场了，它能帮助你设计出更好的用户体验。
+响应式网站设计只有弹性布局这一个技巧是不够用的。有时候浏览器的视窗宽度可能会太小，小到甚至按比例缩放也会出现特别小的栏框，以至于网站内容不能有效地显示。尤其是当网站布局变得很小或很大的时候，网站上的文字可能会变得难以辨认，布局也可能会被打乱。这时候，媒体查询（ media queries ）就派上用场了，它能帮助你设计出更好的用户体验。
 
 在 CSS2.1 中定义了媒体类型，通过给 `<link>` 元素添加 media 属性，可以为不同的媒体类型加载不同的样式表。
 
@@ -169,3 +169,4 @@ shit. Time for a breakpoint!
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
 - [知乎上讨论临界点的帖子](http://www.zhihu.com/question/28653799)
 - [定义临界点](http://responsivedesign.is/strategy/page-layout/defining-breakpoints)
+- [google&udacity 课程的“选择断点”章节](https://www.udacity.com/course/viewer#!/c-ud893/l-3533879576/m-3492369998)
