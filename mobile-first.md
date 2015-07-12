@@ -107,6 +107,7 @@ Luke 提出这个观点的时候，其实讨论了手机 APP 的各种优势，�
 
 ### 参考链接
 
+- [google 和 udacity 的响应式课程的 mobile first 章节](https://www.udacity.com/course/viewer#!/c-ud893/l-3494350031/m-3473199720)
 - <http://learn.shayhowe.com/advanced-html-css/responsive-web-design/>
 - [按钮样式来自 materializecss](http://materializecss.com/buttons.html)
 - <https://web3canvas.com/what-is-mobile-first-responsive-design/>
