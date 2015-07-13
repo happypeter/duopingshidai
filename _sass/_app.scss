@@ -4,8 +4,8 @@ body {
   background: #f9f9f9;
   line-height: 1.7;
   color: #212121;
-  font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
-  // window7 上面根本就没有 sans-serif 字体，上面一行来自 mi.com
+  font-family: "Microsoft Yahei", sans-serif;
+  // window7 上面根本就没有 sans-serif 字体，上面参考 mi.com
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
@@ -63,6 +63,7 @@ h1.book-title {
   color: white;
   margin: 0;
   padding-top: 70px;
+  font-weight: 100;
   padding-bottom: 30px;
 }
 
