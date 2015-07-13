@@ -31,3 +31,13 @@ It's important to note that we're not disabling the user's ability to zoom the p
 
 http://learn.shayhowe.com/advanced-html-css/responsive-web-design/
   - viewport 的知识很重要
+
+
+### EM 的妙用
+我的思路是这样，大屏上面比如一个自然段的字体是 18px 那么手机上看这样页面的时候，因为离眼睛会近一些，所以字体可以变成 18x0.9，那么这时候如果 p 标签的 margin-bottom 是用像素设置的比如说 10px ，那么对于手机来说可能就不好看了，需要用 media-query 在设置一个小一点的值才好（ a list apart 就是这样）。但是如果 p 的 margin-bottom: 1em 那么这个就不用专门改了。
+
+找个例子？
+
+- ala 和 html5rocks 上面手机上都没有用 smaller 的 font-size 。
+- https://laracasts.com/discuss/channels/general-discussion/default-appscss-node-modules-path-highlighted-in-error-in-phpstorm 是这个思路。
+
