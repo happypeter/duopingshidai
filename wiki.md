@@ -17,20 +17,12 @@ http://alistapart.com/article/responsive-web-design/
 
 http://c.haoduoshipin.com/guaishou/ 上面有几集内容
 
-em/rem 各自优势
-固定宽度，改成百分比宽度
 多版本图片技术，参考 https://designschool.canva.com/ 上的图片
 svg 来取代 png 来解决清晰度问提
-mobile first 的工作流，多看大牛博客，可以大段引用原话
 总之，就是多屏时代的网站，区别于传统时代的所有的技术点（每个配 demo ），设计思维（参考 alistapart 的文章），所有来源。
 
 
-关于 <meta name="viewport" content="width=device-width, initial-scale=1"> 这一行怎么写，还是 bootstrap 上最权威一些，见 <http://getbootstrap.com/css/> 。
-要不要禁用用户缩放功能呢？见 http://www.html5rocks.com/en/mobile/responsivedesign/
-It's important to note that we're not disabling the user's ability to zoom the page (which you could do by adding user-scalable=no to the content attribute), even though we're optimizing the content for small screens. It's recommended to keep user zooming enabled to keep things as accessible as possible. However, there are use cases to disable user-zooming, such as if you're including fixed positioned elements.
 
-http://learn.shayhowe.com/advanced-html-css/responsive-web-design/
-  - viewport 的知识很重要
 
 
 ### EM 的妙用
