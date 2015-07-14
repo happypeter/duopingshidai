@@ -6,7 +6,7 @@ title: 媒体查询
 响应式网站设计只有弹性布局这一个技巧是不够用的，媒体查询（ media queries ）也是响应式设计的核心技巧之一。媒体查询是可应用于 CSS 样式的简单过滤器。有了这些过滤器，我们可以根据设备呈现内容的特点轻松更改样式，包括显示屏类型、宽度、高度、方向甚至是分辨率。
 
 
-![](images/query/css-medai-queries.jpg)
+![](images/query/css-media-queries.jpg)
 
 在 CSS2.1 中定义了媒体类型，通过给 `<link>` 元素添加 media 属性，可以为不同的媒体类型加载不同的样式表。
 
