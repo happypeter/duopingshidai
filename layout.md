@@ -3,7 +3,7 @@ layout: book
 title: 弹性布局和弹性媒介
 ---
 
-响应式网站设计主要包括三部分：弹性布局、媒体查询和弹性媒介。这一章我们主要介绍一下弹性布局和弹性媒介。另外，再介绍一下目前最新最先进的 Flexbox CSS 布局。
+响应式网站设计主要包括三部分：弹性布局、媒体查询和弹性媒介。这一章我们主要介绍一下弹性布局和弹性媒介。另外，再介绍一下目前最新的 Flexbox CSS 布局方式。
 
 ### 弹性布局
 
@@ -130,7 +130,22 @@ html 元素；若整个页面没有定义字体大小，而是使用浏览器默
 flex 布局的设计思想是这样的，让一个容器（ flex 容器）能够自动调整容器内元素（子元素）的宽度、高度以及顺序，并尽可能以最佳的方式来适应容器自身空间大小。也就是说，一个
 flex 容器，当空间变大时，其中的子元素也会随之扩大； 当空间变小时，其中的子元素也会随之缩小。无论容器如何变化，子元素都能自如缩放。
 
-注意： Flexbox 布局最适用于网站中的组件，和小规模布局，而网格布局则用于大规模布局。另外，由于它的浏览器支持[从 IE10 开始](http://caniuse.com/#search=flexbox)，所以使用的时候也是要谨慎的。 [查看 Flexbox 的一个 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)。
+，虽然由于 Flexbox 目前只支持最新的浏览器（ [从 IE10 开始](http://caniuse.com/#search=flexbox) ）版本而使得使用受限，但是很多人认为在未来，它将会是人们用来实现流体网格的首选方案。
+
+[查看 Flexbox 的一个 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)。其中关键部分的代码如下：
+
+{% highlight css %}
+  .container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+{% endhighlight %}
+
+更多 Flexbox 的使用技巧，可以参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) 。
 
 ### 参考链接
 

@@ -1,6 +1,8 @@
 ---
-title: 设计模式
+title: 响应式模式
 ---
+
+有意或者无意之间，我们的网页总会归于某种”响应式模式“（ Responsive Patterns ），这里来介绍一下几种常见的模式，相信是非常有启发性的。
 
 http://teamtreehouse.com/library/responsive-layouts
 
