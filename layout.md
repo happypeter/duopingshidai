@@ -154,3 +154,5 @@ flex 容器，当空间变大时，其中的子元素也会随之扩大； 当�
 - <http://clearleft.com/thinks/anequalheightgridusingflexbox/>
 - [google&udacity 响应式课程的 fluid grid 介绍](https://www.udacity.com/course/viewer#!/c-ud893/l-3533879576/m-3618968538)
 - [google&udacity 响应式课程的 Flexbox 介绍](https://www.udacity.com/course/viewer#!/c-ud893/l-3533879576/m-3604458542)
+
+<!-- https://teamtreehouse.com/library/responsive-layouts/responsive-patterns/flexbox -->
