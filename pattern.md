@@ -8,17 +8,26 @@ title: 响应式模式
 
 常见的模式有四种，并且有时候也可以在一个页面上混合两种模式来使用。
 
+https://github.com/santhoshvai/Responsive-Web-Design-Fundamentals/wiki/4-Common-Responsive-patterns 这里的这四张图是很清晰的。
+
 ### Mostly Fluid
 
 <!-- 文字内容就参考 https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3484798853 -->
 <!-- 给出一个实际中采用这种方案的例子 -->
 <http://www.html5rocks.com/en/> 就是属于这种情况的一个例子。
 
+![](images/pattern/most_fluid.png)
+
+
 ### Column Drop
 
-
+![](images/pattern/column_drop.png)
 
 ### 其他
+
+
+![](images/pattern/layout_shifter.png)
+![](images/pattern/off_canvas.png)
 
 还有一种模式叫 [layout shifter](https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3484798853) 。另一种叫 [Off Canvas](https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3530719305)，就是当在手机上显示的时候，把一些不常用的页面元素隐藏起来，当然要有一个汉堡包按钮能很方便的让他们显示出来。而当屏幕空间足够的时候，直接显示前面被隐藏的内容，例如一个导航栏。
 
