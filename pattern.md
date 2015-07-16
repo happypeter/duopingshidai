@@ -12,7 +12,7 @@ title: 响应式模式
 
 ![](images/pattern/column_drop.png)
 
-Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂直一个跟一个排成一列。 屏幕变宽时，到达第一个临界点后，第一个和第二个元素就变成左右两列排布了。后面
+Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂直一个跟一个排成一列。 屏幕变宽时，到达第一个临界点后，第一个和第二个元素就变成左右两列排布了。后面屏幕继续变宽，第三课元素又”下沉“（反向的）到了这一行中。
 这是最简单最常见的一种模式。
 
 
@@ -123,9 +123,9 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
 ![](images/pattern/layout_shifter.png)
 
 这个我翻译为“变换式布局”。这种方式就比较灵活了，跟前面的两种方式一样的部分是：随着屏幕变宽，单列布局变多列。但是，
-前面两种方式都是各个元素由原本的独占一行，变为依次变成多个元素共同占有一行。注意，没有那个元素是跨越多行的，或者说就是同行上每个元素的高度是相同的。 而 Layout Shifter 这种方式的特点是各个元素的摆放位置不一定遵循原来的顺序，而可以根据需要任意调整，这就是所谓的“变换”（ shift ），也会出现上面图中所示的一个元素的跨多行的情况。
+前面两种方式都是各个元素由原本的独占一行，变为依次变成多个元素共同占有一行。注意，没有哪个元素是跨越多行的，或者说就是同行上每个元素的高度是相同的。 而 Layout Shifter 这种方式的特点是各个元素的摆放位置不一定遵循原来的顺序，而可以根据需要任意调整，这就是所谓的“变换”（ shift ），也会出现上面图中所示的一个元素的跨多行的情况。
 
-这种布局如果使用 flexbox 的 `order` 来实现是非常方便的：
+当然，这种布局如果使用 flexbox 的 `order` 来实现是非常方便的：
 
 {% highlight html %}
 <div class="container">
@@ -179,12 +179,13 @@ CSS 代码如下：
 - <http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html>
 
 
-### Off Canvas
+### Off Canvas 抽屉式
 
 ![](images/pattern/off_canvas.png)
 
-另一种叫 [Off Canvas](https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3530719305)，就是当在手机上显示的时候，把一些不常用的页面元素隐藏起来，当然要有一个汉堡包按钮能很方便的让他们显示出来。而当屏幕空间足够的时候，直接显示前面被隐藏的内容，例如一个导航栏。
+Peter 翻译为”抽屉式“。[Off Canvas](https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3530719305) 模式的特点是当在手机上显示的时候，把一些不常用的页面元素隐藏起来，当然要有一个汉堡包按钮能很方便的让他们显示出来。而当屏幕空间足够的时候，直接显示前面被隐藏的内容，例如一个导航栏。
 
+实现方式，html 代码如下：
 
 {% highlight html %}
 <nav id="drawer" class="dark_blue">
@@ -192,6 +193,8 @@ CSS 代码如下：
 <main class="light_blue">
 </main>
 {% endhighlight %}
+
+CSS 代码：
 
 {% highlight css %}
 html,
@@ -239,7 +242,6 @@ menu.addEventListener('click', function(e) {
 实际例子：下图来自 <https://www.canva.com/> ：
 
 ![](images/pattern/hamburger.png)
-
 
 
 ### 参考
