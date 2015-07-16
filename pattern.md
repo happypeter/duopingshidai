@@ -4,18 +4,16 @@ title: 响应式模式
 
 有意或者无意之间，我们的网页总会归于某种”响应式模式“（ Responsive Patterns ），这里来介绍一下几种常见的模式，相信是非常有启发性的。
 
-非常常见的一种情况是，在手机上，网站内容是单列布局的，到了桌面电脑上面就变成了多列结构。所谓”模式“，要解决的重要问题，就是在临界点发生的时候，网站布局改做出怎样的变化。
-
-常见的模式有四种，并且有时候也可以在一个页面上混合两种模式来使用。
+基本思路就是这样，在手机上，网站内容是单列布局的，到了桌面电脑上面就变成了多列结构。所谓”模式“，就是在临界点发生的时候，网站布局该做出怎样的变化。比较常见的模式有四种，当然有时候也可以在一个页面上混合两种模式来使用。
 
 下面的主要内容和各个图片都来自[这篇文档](https://github.com/santhoshvai/Responsive-Web-Design-Fundamentals/wiki/4-Common-Responsive-patterns)
-
 
 ### Column Drop
 
 ![](images/pattern/column_drop.png)
 
-最窄的屏幕上，所有元素就垂直一个跟一个排成一列。 屏幕变宽时，到达第一个临界点后，第一个和第二个元素就变成左右两列排布了。
+Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂直一个跟一个排成一列。 屏幕变宽时，到达第一个临界点后，第一个和第二个元素就变成左右两列排布了。后面
+这是最简单最常见的一种模式。
 
 
 {% highlight html %}
@@ -53,6 +51,11 @@ title: 响应式模式
 }
 {% endhighlight %}
 
+实际中的一些网站：
+
+- <http://modernizr.com/>
+- <http://weenudge.com/>
+
 ### Mostly Fluid
 
 <!-- 文字内容就参考 https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3484798853 -->
@@ -60,8 +63,9 @@ title: 响应式模式
 
 ![](images/pattern/most_fluid.png)
 
-跟前面的 Column Drop 一样，当屏幕最窄的时候，元素一个跟一个排成一列。当布局开始变宽，会出现网格模式。宽到一定程度，主体内容的左右两侧就会出现 margin ，而不是让主体内容一直跟着 viewport 来变宽。
+这种模式我翻译为“基本流体”，这种方式其实跟 Column Drop 差不多，只是稍微灵活了一点。跟前面的 Column Drop 一样，当屏幕最窄的时候，元素一个跟一个排成一列。当布局开始变宽，会出现网格模式，具体每一行上有几列内容就不一定了，根据我们自己页面的内容自由调整。宽到一定程度，主体内容的左右两侧就会出现 margin ，而不是让主体内容一直跟着 viewport 来变宽。
 
+实现方式不唯一，下面的代码是用 flexbox 方式实现的，可供参考。首先 html 写成下面这样：
 {% highlight html %}
 <div class="container">
   <div class="box dark_blue"></div>
@@ -72,6 +76,7 @@ title: 响应式模式
 </div>
 {% endhighlight %}
 
+对应的 CSS ：
 {% highlight css %}
 .container {
     display: flex;
@@ -106,15 +111,21 @@ title: 响应式模式
 }
 {% endhighlight %}
 
-<http://www.html5rocks.com/en/> 就是属于这种情况的一个例子。
+实际例子：
+
+- <http://www.html5rocks.com/en/>
+- <http://mediaqueri.es/ala/>
+- <http://mediaqueri.es/>
 
 
 ### Layout Shifter
 
 ![](images/pattern/layout_shifter.png)
 
-这种方式就比较灵活了，不仅仅跟前面的两种方式一样，随着屏幕变宽，单列布局变多列。这种方式的特点是各个元素的摆放位置不在遵循原来的顺序，而可以根据需要任意调整。
+这个我翻译为“变换式布局”。这种方式就比较灵活了，跟前面的两种方式一样的部分是：随着屏幕变宽，单列布局变多列。但是，
+前面两种方式都是各个元素由原本的独占一行，变为依次变成多个元素共同占有一行。注意，没有那个元素是跨越多行的，或者说就是同行上每个元素的高度是相同的。 而 Layout Shifter 这种方式的特点是各个元素的摆放位置不一定遵循原来的顺序，而可以根据需要任意调整，这就是所谓的“变换”（ shift ），也会出现上面图中所示的一个元素的跨多行的情况。
 
+这种布局如果使用 flexbox 的 `order` 来实现是非常方便的：
 
 {% highlight html %}
 <div class="container">
@@ -126,6 +137,8 @@ title: 响应式模式
   <div class="box red"></div>
 </div>
 {% endhighlight %}
+
+CSS 代码如下：
 
 {% highlight css %}
 .container {
@@ -159,7 +172,12 @@ title: 响应式模式
 }
 {% endhighlight %}
 
-[这里](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/layout-shifter?hl=en)给出了一些这种策略的实例。
+达成这种模式也不一定非要用 flexbox，比如下面这些实际中的例子：
+
+- <http://foodsense.is/>
+- <http://www.anderssonwise.com/>
+- <http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html>
+
 
 ### Off Canvas
 
@@ -218,14 +236,16 @@ menu.addEventListener('click', function(e) {
 })
 {% endhighlight %}
 
-下图来自 <https://www.canva.com/> ：
+实际例子：下图来自 <https://www.canva.com/> ：
 
 ![](images/pattern/hamburger.png)
 
 
-<!-- http://teamtreehouse.com/library/responsive-layouts
- -->
 
 ### 参考
 
 - [google&udactiy 课程](https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/e-3529819408/m-3571808936)
+- [google developer 上跟上面课程对应的网页](https://developers.google.com/web/fundamentals/layouts/rwd-patterns/mostly-fluid?hl=en)
+
+<!-- http://teamtreehouse.com/library/responsive-layouts
+ -->
