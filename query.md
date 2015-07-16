@@ -116,12 +116,12 @@ shit. Time for a breakpoint!
 
 {% highlight css %}
 body {
-  font-size: 16px; // 移动优先，这个默认值是为移动设备而生
+  font-size: 16px; /* 移动优先，这个默认值是为移动设备而生 */
 }
 
 @media (min-width: 500px) {
   body {
-    font-size: 18px; // 大屏设备
+    font-size: 18px; /* 大屏设备 */
   }
 }
 {% endhighlight %}
