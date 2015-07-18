@@ -8,3 +8,5 @@ title: 通过框架实现响应式
 >你使用一个框架，因为你不想重新造轮子，但是你仍然想按照自己的方式给它加入新花样。
 
 [demo](http://book.haoduoshipin.com/go-responsive/demo/framework/)
+
+http://www.initializr.com/ 这里也有相应式的内容。
