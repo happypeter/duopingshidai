@@ -50,6 +50,17 @@ title: 课程大纲
 - 第一节 Github Pages 搭建
 - 第二节 Jekyll 框架上手
 
+<!--
+- 可以先完成 navbar 部分，然后再来分离 layout
+- 步骤
+  - 新建 _layouts/default.html
+  - 里面添加 {{ content }}
+  - 就可以了，没必要使用 _config.yml
+  - github page 实在太慢，推荐给大家就行了，实际演示的时候用我自己的服务器
+    - http://book.haoduoshipin.com/go-responsive/demo/class/
+    - 大家 jekyll server 的过程就不演示了，不然就成了后端课程了
+ -->
+
 ### 第二章 移动优先
 
 如果您认为一个网站应该先设计桌面版然后在去为小屏设备去调整，对不起，您错了！“移动优先”恰好是一套相反的思路。本章解释一下移动优先好处有哪些？
