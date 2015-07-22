@@ -45,10 +45,10 @@ title: 课程大纲
 
 ### 第二章 开发环境准备
 
-最然有其他很多选择，但是本课程中 Peter 会使用 Github Pages 提供的静态网站服务来把咱们的代码托管到互联网上方便和您分享。另外可能是更重要的要使用 jekyll 这个简单的框架来辅助开发。因为代码量比较大，直接都写在一个文件中维护起来就很头疼，jekyll 带有布局文件和代码片段导入的各种小功能，可以让代码结构清晰。
+使用 jekyll 这个简单的框架来辅助开发。因为代码量比较大，直接都写在一个文件中维护起来就很头疼，jekyll 带有布局文件和代码片段导入的各种小功能，可以让代码结构清晰。另外会配合 Gulp 来运行一些自动化任务，比如 sass 编辑，添加 vendor 前缀，以及用 browersync 来调试页面。
 
-- 第一节 Github Pages 搭建
-- 第二节 Jekyll 框架上手
+- 第一节 jekyll&Gulp 环境
+- 第二节 Sass 和 Browsersync
 
 <!--
 - 可以先完成 navbar 部分，然后再来分离 layout
@@ -59,6 +59,8 @@ title: 课程大纲
   - github page 实在太慢，推荐给大家就行了，实际演示的时候用我自己的服务器
     - http://book.haoduoshipin.com/go-responsive/demo/class/
     - 大家 jekyll server 的过程就不演示了，不然就成了后端课程了
+
+    With LiveReload, you have to install browser extension, but BrowserSync uses Socket.io, so it can supports more than one browser at once. This is great for working with responsive design, where screens with different sizes are needed to be tested.
  -->
 
 ### 第二章 移动优先
@@ -89,7 +91,7 @@ title: 课程大纲
 - 第一节 Material Design
 - 第二节 汉堡包按钮导航栏
 - 第三节 使用 SVG 来创建图标
-- 第四节 highcharts 相应式图表
+- 第四节 highcharts 响应式图表
 
 <!--     - http://toy.haoduoshipin.com/gm/material-design/introduction.html 这个挺简单
  -->
@@ -106,6 +108,9 @@ title: 课程大纲
 - 第一节 寻找临界点（ Break Point ）
 - 第二节 绝对变相对
 - 第三节 常用响应模式（ Responsive Pattern ）
+
+
+<!-- Ie8 不支持 rem ，所以才有这个项目：https://github.com/robwierzbowski/grunt-pixrem -->
 
 <!--  要基于内容，而非设备宽度来设置临界点
    多变的响应模式 新的模式不断出现，但是总有几种是最为重要，不可不知的。
@@ -131,9 +136,6 @@ title: 课程大纲
 当屏幕变大之后，用 background-image 加载一个比较大的图片。
 图片的使用注意事项绝对值得讲一节 -->
 
-<!-- 没有视频整个设计就很枯燥了，在老师简介的部分，把背景图设置成视频吧，手机上禁用 -->
-<!-- - 第三节 videojs 大背景视频实战
-制作类似于 newrelic thinkful airbnb 首页那样的背景视频 -->
 
 ### 第六章 响应式活在生态系统里
 
