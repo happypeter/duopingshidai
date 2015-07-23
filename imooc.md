@@ -61,6 +61,11 @@ title: 课程大纲
     - 大家 jekyll server 的过程就不演示了，不然就成了后端课程了
 
     With LiveReload, you have to install browser extension, but BrowserSync uses Socket.io, so it can supports more than one browser at once. This is great for working with responsive design, where screens with different sizes are needed to be tested.
+
+    - 尝试 web componnet 的思路
+    - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
+    - _includes/navbar.html partical 名字起得跟 .scss 文件同名
+    - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
  -->
 
 ### 第二章 移动优先
