@@ -66,6 +66,11 @@ title: 课程大纲
     - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
     - _includes/navbar.html partical 名字起得跟 .scss 文件同名
     - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
+
+  - gulp_sass_jekyll 系统常见问题
+    - 现象：修改 _scss/*.scss 中的内容， gulp 终端的信息都是 `0 file changed`，到页面上看，任何修改都不生效，但是也不报错，基本上就是 sass 任务运行了，但是没有处理任何文件
+    - 原因：_scss/_layout.scss 我删除了，但是 main.scss 中忘了删相应的 @import 语句
+    - 教训：这个很难定位错误，用了我半小时的时间才解决。所以还是要在调代码的时候慢一点，多测试
  -->
 
 ### 第二章 移动优先
