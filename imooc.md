@@ -2,6 +2,8 @@
 title: 课程大纲
 ---
 
+<!-- more： wiki-imooc.md
+ -->
 
 ### 课程名称
 
@@ -24,9 +26,6 @@ title: 课程大纲
 
 注意，这不是一套 html/css 入门课程，所以作者期待您有3个月以上的 css 经验。而且这是套强动手课程，如果您还没做打下做普通桌面版页面的基本功，而直接来制作多屏响应式代码，由此带来的眩晕恶心感，作者概不负责。
 
-<!-- 基本上 google treehouse 以及 css-tricks 上的优秀内容都不要放过 -
-  我的课程中就讲动手的，理论方面的都在书里面详细写就行
- -->
 
 ## 课程大纲
 
@@ -37,41 +36,12 @@ title: 课程大纲
 - 第一节 是时候学习响应式了
 - 第二节 旅途介绍
 
-<!-- 相应式三大技术一定要提一下
-理论知识课程里面一定从略，指向我的书，在我的书里面要详细讲
- -->
-
-<!--  就是重新设计  http://www.imooc.com/view/333  -->
-
 ### 第二章 开发环境准备
 
 使用 jekyll 这个简单的框架来辅助开发。因为代码量比较大，直接都写在一个文件中维护起来就很头疼，jekyll 带有布局文件和代码片段导入的各种小功能，可以让代码结构清晰。另外会配合 Gulp 来运行一些自动化任务，比如 sass 编辑，添加 vendor 前缀，以及用 browersync 来调试页面。
 
 - 第一节 jekyll&Gulp 环境
 - 第二节 Sass 和 Browsersync
-
-<!--
-- 可以先完成 navbar 部分，然后再来分离 layout
-- 步骤
-  - 新建 _layouts/default.html
-  - 里面添加 {{ content }}
-  - 就可以了，没必要使用 _config.yml
-  - github page 实在太慢，推荐给大家就行了，实际演示的时候用我自己的服务器
-    - http://book.haoduoshipin.com/go-responsive/demo/class/
-    - 大家 jekyll server 的过程就不演示了，不然就成了后端课程了
-
-    With LiveReload, you have to install browser extension, but BrowserSync uses Socket.io, so it can supports more than one browser at once. This is great for working with responsive design, where screens with different sizes are needed to be tested.
-
-    - 尝试 web componnet 的思路
-    - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
-    - _includes/navbar.html partical 名字起得跟 .scss 文件同名
-    - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
-
-  - gulp_sass_jekyll 系统常见问题
-    - 现象：修改 _scss/*.scss 中的内容， gulp 终端的信息都是 `0 file changed`，到页面上看，任何修改都不生效，但是也不报错，基本上就是 sass 任务运行了，但是没有处理任何文件
-    - 原因：_scss/_layout.scss 我删除了，但是 main.scss 中忘了删相应的 @import 语句
-    - 教训：这个很难定位错误，用了我半小时的时间才解决。所以还是要在调代码的时候慢一点，多测试
- -->
 
 ### 第二章 移动优先
 
@@ -80,37 +50,15 @@ title: 课程大纲
 - 第一节 由简入繁易，由繁如简难
 - 第二节 框架选择
 
-<!-- 举出那个按钮的小例子，展示出先做移动版有什么好处 -->
-<!-- 这一节主要就是介绍移动优先思路的好处 -->
-<!-- 应对无穷的设备尺寸 -->
-
-
-<!-- - 对比一下 bootstrap 和 initializer 还是用 initializer 手写吧 -->
 
 ### 第三章 最窄屏幕设计
 
 根据移动优先的思路，开始为所有设备中最小宽度的屏幕来制作页面。这时布局一般是很简单的，单列布局。采用 Google Material Design 风格来制作页面。
 
-<!--   - 就照着这个来：http://qd.haoduoshipin.com/
-  - 先选定最窄屏幕 iphone5 ，单位就先用 px 来做
-  - 使用 chrome 移动调试工具
-  - viewport 在最一开始就要涉及了，写个 hello World 页面，用 chrome 移动调试工具打开就可以看到
-    320 像素的 iphone5，实际的宽度就是 980 了。
- -->
-
 - 第一节 Material Design
 - 第二节 汉堡包按钮导航栏
 - 第三节 使用 SVG 来创建图标
 - 第四节 highcharts 响应式图表
-
-<!-- https://www.google.com/design/icons 这里来下载 icon -->
-<!--     - http://toy.haoduoshipin.com/gm/material-design/introduction.html 这个挺简单
- -->
-
-<!-- 弄个 piechart  做过优良可差的评分统计-->
-
-
-
 
 ### 第四章 寻找临界点
 
@@ -121,31 +69,12 @@ title: 课程大纲
 - 第三节 常用响应模式（ Responsive Pattern ）
 
 
-<!-- Ie8 不支持 rem ，所以才有这个项目：https://github.com/robwierzbowski/grunt-pixrem -->
-
-<!--  要基于内容，而非设备宽度来设置临界点
-   多变的响应模式 新的模式不断出现，但是总有几种是最为重要，不可不知的。
-
-- 第一节 列下沉 Column Drop
-- 第二节 基本流动 Mostly Fluid
-- 第三节 自由变换 Layout Shifter
- -->
-
-<!--  em & rem & 百分比 都应在何时选用，要在代码例子中体现妙处来
-理论就不讲了，和那个老师重复
- -->
-
-
 ### 第五章 弹性媒体
 
 大屏设备，视网膜屏，智能手表这些设备的出现，给图片和视频的使用带来了新的挑战，技术上又哪些要注意的点，本章来揭晓。
 
 - 第一节 响应式环境下的图片
 - 第二节 弹性视频播放器
-
-<!--
-当屏幕变大之后，用 background-image 加载一个比较大的图片。
-图片的使用注意事项绝对值得讲一节 -->
 
 
 ### 第六章 响应式活在生态系统里
@@ -160,6 +89,3 @@ title: 课程大纲
 
 录制这门课程，我自己认为是把网上所有最优秀的学习资源都看了，但是有哪些值得推荐呢？只是其中的一小部分。
 
-
-<!-- peter,相关的参考资料等，从这门课一开始，做个统计，可以添加到本网站的wiki中，如参考资料链接、补充资料、相关教学资料等。
- -->
