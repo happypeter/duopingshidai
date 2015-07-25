@@ -3,7 +3,7 @@ layout: book
 title: viewport 视窗
 ---
 
-<!-- http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972 -->
+
 
 <!-- 这个内容是动手制作 响应式 页面的第一步，是否应该放到比较靠前的章节呢？ -->
 

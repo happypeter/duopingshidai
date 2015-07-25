@@ -28,6 +28,19 @@ title: 课程大纲
 - 第二节 Sass 和 Browsersync
 
 <!--
+  - browersync
+    - Browdersync 有 css injection 功能，意思是不刷新页面直接就改变样式，
+  这个其实很强大的，想想如果有一个 model ，如何来调试他的样式呢？
+    - input livereload
+    - 不用装插件，比 livereload 强太多：http://www.slant.co/topics/1479/compare/~browsersync_vs_codekit_vs_livereload
+    - 多设备同步：http://blog.avisi.nl/2014/04/10/why-you-should-use-browsersync/ 有图有动画
+
+
+  gulp 的插件系统不是闹着玩？css minfiy image compression ...
+  推荐一下就好了，我的这里不用
+ -->
+
+<!--
 - 可以先完成 navbar 部分，然后再来分离 layout
 - 步骤
   - 新建 _layouts/default.html
@@ -74,6 +87,15 @@ title: 课程大纲
   - viewport 在最一开始就要涉及了，写个 hello World 页面，用 chrome 移动调试工具打开就可以看到
     320 像素的 iphone5，实际的宽度就是 980 了。
     http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
+
+  - 基本字体的解决思路
+    html {
+      font-size: 14px
+      @media (min-width: tablet) {
+        font-size: 16px;
+      }
+    }
+  - em 用在器件内部， rem 用来控制间距，这个思路值得专门提一下
  -->
 
 - 第一节 Material Design

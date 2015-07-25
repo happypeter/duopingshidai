@@ -38,7 +38,7 @@ title: 课程大纲
 
 ### 第二章 开发环境准备
 
-使用 jekyll 这个简单的框架来辅助开发。因为代码量比较大，直接都写在一个文件中维护起来就很头疼，jekyll 带有布局文件和代码片段导入的各种小功能，可以让代码结构清晰。另外会配合 Gulp 来运行一些自动化任务，比如 sass 编辑，添加 vendor 前缀，以及用 browersync 来调试页面。
+使用 jekyll 来组织代码。另外会配合 Gulp 来运行一些自动化任务，例如 saas ，autoprefixer 和 browsersync 。
 
 - 第一节 jekyll&Gulp 环境
 - 第二节 Sass 和 Browsersync
