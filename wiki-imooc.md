@@ -131,8 +131,19 @@ title: 课程大纲
 - 第二节 绝对变相对
 - 第三节 常用响应模式（ Responsive Pattern ）
 
-
 <!--
+
+### break point
+
+ Peter 自己的观点是，不要设置全局的三个临界点，每个部分（ 也就是每个 css 中）自己顾自己就可以了。
+ -->
+<!--
+### em/rem
+- http://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+    For this reason, the primary purpose of em units should be to allow for scalability within the context of a specific design element.
+
+- 元器件内部的长度距离，用 em 设置最好，但是字体本身用 rem 更好
+  - http://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
 
 ### EM 的妙用
 
