@@ -1,4 +1,6 @@
 ---
+layout: course
+title: 第二章：安装开发环境
 ---
 
 第一节  jekyll&gulp 开发环境简介
