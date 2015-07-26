@@ -35,9 +35,6 @@ title: 课程大纲
     - 不用装插件，比 livereload 强太多：http://www.slant.co/topics/1479/compare/~browsersync_vs_codekit_vs_livereload
     - 多设备同步：http://blog.avisi.nl/2014/04/10/why-you-should-use-browsersync/ 有图有动画
 
-
-  gulp 的插件系统不是闹着玩？css minfiy image compression ...
-  推荐一下就好了，我的这里不用
  -->
 
 <!--
@@ -57,13 +54,10 @@ title: 课程大纲
     - _includes/navbar.html partical 名字起得跟 .scss 文件同名
     - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
 
-  - gulp_sass_jekyll 系统常见问题
-    - 现象：修改 _scss/*.scss 中的内容， gulp 终端的信息都是 `0 file changed`，到页面上看，任何修改都不生效，但是也不报错，基本上就是 sass 任务运行了，但是没有处理任何文件
-    - 原因：_scss/_layout.scss 我删除了，但是 main.scss 中忘了删相应的 @import 语句
-    - 教训：这个很难定位错误，用了我半小时的时间才解决。所以还是要在调代码的时候慢一点，多测试
+
  -->
 
-### 第二章 移动优先
+### 第三章 移动优先
 
 如果您认为一个网站应该先设计桌面版然后在去为小屏设备去调整，对不起，您错了！“移动优先”恰好是一套相反的思路。本章解释一下移动优先好处有哪些？
 
@@ -77,7 +71,7 @@ title: 课程大纲
 
 <!-- - 对比一下 bootstrap 和 initializer 还是用 initializer 手写吧 -->
 
-### 第三章 最窄屏幕设计
+### 第四章 最窄屏幕设计
 
 根据移动优先的思路，开始为所有设备中最小宽度的屏幕来制作页面。这时布局一般是很简单的，单列布局。采用 Google Material Design 风格来制作页面。
 
@@ -129,7 +123,7 @@ title: 课程大纲
 
 
 
-### 第四章 寻找临界点
+### 第五章 寻找临界点
 
 最窄的设计出来了，下一步就是不断拉伸浏览器视窗宽度，当页面看起来已经不好看了，那么这时就有必要设置一个临界点了。代码层面我们要用 Media Query 来给宽度大于临界点的屏幕做出样式调整。
 
@@ -137,6 +131,22 @@ title: 课程大纲
 - 第二节 绝对变相对
 - 第三节 常用响应模式（ Responsive Pattern ）
 
+
+<!--
+
+### EM 的妙用
+
+
+- http://simurai.com/blog/2014/05/04/cssconf/
+  - 18: 41 em for padding rem for margin
+
+- http://webdesign.tutsplus.com/tutorials/quick-tip-try-combining-ems-and-rems--cms-23270
+
+- em/rem 学习并不难？devtools 中查看 computed 一项就知道了
+
+- http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
+
+ -->
 <!--
 
 - 控制每一行的文字数量是个重要任务。

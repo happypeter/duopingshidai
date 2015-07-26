@@ -36,7 +36,9 @@ gulp.task('watch', function () {
 });
 {% endhighlight %}
 
+gulp 的插件系统不是闹着玩？css minfiy ， image compression ... 各种强大功能都有。
 
+顺便提一个常见问题：现象是这样。修改 _scss/*.scss 中的内容，gulp 终端的信息都是 `0 file changed`，到页面上看，任何修改都不生效，但是也不报错，基本上就是 sass 任务运行了，但是没有编辑任何文件。 原因是这样，_scss/_layout.scss 我删除了，但是 main.scss 中忘了删相应的 @import 语句，也就是说 gulp-sass 当遇到某些错误的时候是不报错的。这个给我的教训是，这个很难定位错误，用了我半小时的时间才解决。所以还是要在调代码的时候慢一点，多测试。
 
 ## 第三节 jekyll 和 browsersync
 
