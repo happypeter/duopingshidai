@@ -92,7 +92,7 @@ gem install jekyll
 
 大的原则是：每一个文件内容都很少，打开一眼就能看清结构
 - index.html 里面几乎全部是 {% include hero.html %}
-- hero.html 还可以 {% inlude hero_action_btn.html %}
+- hero.html 还可以 {% include hero_action_btn.html %}
 - 所有的 partial 包括 sub_partial 都放在 _inlcludes/ 顶级下，用文件名作 namespace
 - 每个 partial 都有一个跟自己同名的 .scss
 - main.scss 中同样只 import 第一级 partial 的 .scss 文件（ 其中 import sub_partial 的 .scss ），
