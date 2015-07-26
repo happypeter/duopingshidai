@@ -22,17 +22,17 @@ Jekyll 的功能很多，但是我这里会用的就是它的文件拼接功能�
 <https://www.npmjs.com/package/gulp-sass> 上的 gulpfile 内容有问题，运行不了。下面是正确的 gulpfile.js 文件：
 
 {% highlight js %}
-var gulp        = require('gulp');
-var sass        = require('gulp-sass');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
-    return gulp.src('_scss/main.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('./css'));
+  return gulp.src('_scss/main.scss')
+         .pipe(sass())
+         .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
+  gulp.watch('_scss/*.scss', ['sass']);
 });
 {% endhighlight %}
 
