@@ -17,9 +17,7 @@ Jekyll 的功能很多，但是我这里会用的就是它的文件拼接功能�
 
 我用的是 aliyun 的服务器，但是域名要备案。所以可以选择国外服务器，或者本地搭建虚拟机。
 
-
-
-根据 https://github.com/shakyShane/jekyll-gulp-sass-browser-sync 的说明，不用 `gem install sass`
+使用 Gulp 参考了这个项目： <https://github.com/shakyShane/jekyll-gulp-sass-browser-sync>
 
 {% highlight js %}
 var gulp        = require('gulp');
