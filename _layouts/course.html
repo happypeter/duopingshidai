@@ -8,7 +8,24 @@
   <link rel="shortcut icon" href="../images/favicon.png">
 </head>
 <body>
-  {{ content }}
-  {% include footer.html %}
+  <div class="page header">
+    <div class="container">
+      <a href="/go-responsive/c" class="home">
+        Home
+      </a>
+      <!--[if lte IE 9]>
+      <span style="padding: 0 5px; float: left; color: white; font-weight: bold; line-height: 64px">>>></span>
+      <![endif]-->
+      <span class="chapter-title">
+        {{ page.title }}
+      </span>
+     </div>
+   </div>
+   <div class="main container">
+     <div class="card">
+     {{ content }}
+     </div>
+   </div>
+   {% include footer.html %}
 </body>
 </html>
