@@ -15,7 +15,10 @@ Jekyll 的功能很多，但是我这里会用的就是它的文件拼接功能�
 
 ## 第二节 安装 gulp 和 sass
 
-我用的是 aliyun 的服务器，但是域名要备案。所以可以选择国外服务器，或者本地搭建虚拟机。我的 aliyun 服务器上面安装的是 ubuntu 14.04 的 Linux 系统，要安装 Gulp ，首先要安装 nodejs 和 npm ，参考 [digital Ocean 的文档](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server) ，可以通过添加 PPA 来安装新版本的 nodejs ：
+我用的是 aliyun 的服务器，但是域名要备案。所以可以选择国外服务器，或者本地搭建虚拟机。
+
+### 安装 nodejs
+我的 aliyun 服务器上面安装的是 ubuntu 14.04 的 Linux 系统，要安装 Gulp ，首先要安装 nodejs 和 npm ，参考 [digital Ocean 的文档](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server) ，可以通过添加 PPA 来安装新版本的 nodejs ：
 
 {% highlight console %}
 curl -sL https://deb.nodesource.com/setup | sudo bash -
