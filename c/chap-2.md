@@ -5,19 +5,23 @@ title: 第二章：安装开发环境
 
 ## 第一节  jekyll&gulp 开发环境简介
 
-展示整个环境的妙用。
-
+主要是展示整个环境，各个部分的功能，让大家感觉有意思，不细说。宏观如下图：
 
 ![](images/chap2/overview.png)
 
 Jekyll 的功能很多，但是我这里会用的就是它的文件拼接功能。因为开发的代码比较多，都写到一个页面上就很乱套，所以要分割为一个个的小片段，然后 Jekll 就可以帮助我们拼接成一个页面。
-主要是展示整个环境，各个部分的功能，让大家感觉有意思，不用细说。
+
+
+
 
 ## 第二节 安装 gulp 和 sass
 
-我用的是 aliyun 的服务器，但是域名要备案。所以可以选择国外服务器，或者本地搭建虚拟机。
+这一集主要任务是安装 gulp ，看看怎么在 gulp 框架下把 sass 用起来。
 
 ### 安装 nodejs
+
+我用的是 aliyun 的服务器，但是域名要备案。所以可以选择国外服务器，或者本地搭建虚拟机。
+
 我的 aliyun 服务器上面安装的是 ubuntu 14.04 的 Linux 系统，要安装 Gulp ，首先要安装 nodejs 和 npm ，参考 [digital Ocean 的文档](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server) ，可以通过添加 PPA 来安装新版本的 nodejs ：
 
 {% highlight console %}
@@ -40,14 +44,14 @@ sudo apt-get install build-essential
 首先来全局安装 Gulp ，根据[这里](https://docs.npmjs.com/getting-started/fixing-npm-permissions)的说明，为了避免使用 sudo ，可以按以下步骤操作
 
 {% highlight console %}
-mkdir ~/npm-global
-npm config set prefix '~/npm-global'
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
 {% endhighlight %}
 
 然后把下面一行内容添加到 ~/.bashrc 文件中
 
 {% highlight console %}
-export PATH=~/npm-global/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
 {% endhighlight %}
 
 并运行 `source ~/.bashrc` 。现在再来执行
@@ -58,7 +62,7 @@ npm install -g gulp
 
 就可以功能把 gulp 安装到 ~/.npm-global 文件夹里了。
 
-下面再到项目本地安装 Gulp 。
+下面再到项目本地安装 gulp 。
 
 {% highlight console %}
 mkdir project
@@ -98,6 +102,8 @@ gulp.task('watch', function () {
 gulp 的插件系统不是闹着玩？css minfiy ， image compression ... 各种强大功能都有。
 
 顺便提一个常见问题：现象是这样。修改 _scss/*.scss 中的内容，gulp 终端的信息都是 `0 file changed`，到页面上看，任何修改都不生效，但是也不报错，基本上就是 sass 任务运行了，但是里面的语句没有执行成功。 可能造成这种现象的原因之一是，_scss/_layout.scss 我删除了，但是 main.scss 中忘了删相应的 `@import layout` 语句，也就是说 gulp-sass 当遇到某些错误的时候是不报错的。不报错就很难定位错误，用了我半小时的时间才解决。所以还是要在调代码的时候慢一点，多测试。
+
+
 
 ## 第三节 jekyll 和 browsersync
 
