@@ -19,6 +19,8 @@ Jekyll 的功能很多，但是我这里会用的就是它的文件拼接功能�
 
 使用 Gulp 参考了这个项目： <https://github.com/shakyShane/jekyll-gulp-sass-browser-sync>
 
+<https://www.npmjs.com/package/gulp-sass> 上的 gulpfile 内容有问题，运行不了。下面是正确的 gulpfile.js 文件：
+
 {% highlight js %}
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
@@ -35,9 +37,8 @@ gulp.task('watch', function () {
 {% endhighlight %}
 
 
-https://www.npmjs.com/package/gulp-sass 上的 gulpfile 内容有问题，运行不了。
 
-第三节 jekyll 和 browsersync
+## 第三节 jekyll 和 browsersync
 
 {% highlight console %}
 gem install jekyll
