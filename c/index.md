@@ -16,7 +16,7 @@ title: 多屏时代课程笔记
     <img src="../images/index/cover.jpg"/>
   </div>
   <p class='book-description'>
-    如何让自己的网站变成响应式，在不同的设备上完美展示，提升用户体验
+    这里是 imooc 《多屏时代》课程的笔记。<a href="/go-responsive">回首页</a>
   </p>
 </div>
 
