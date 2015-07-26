@@ -138,6 +138,9 @@ title: 课程大纲
 - 第三节 常用响应模式（ Responsive Pattern ）
 
 <!--
+
+- 控制每一行的文字数量是个重要任务。
+
 @media 可以 nested in a style definition as shown here:
 
 http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-breakpoint--cms-22706
