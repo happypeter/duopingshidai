@@ -63,11 +63,17 @@ npm init
 npm install --save-dev gulp
 {% endhighlight %}
 
-这样不但能在项目内安装 gulp ，而且还可以包 gulp 以及相应版本写入到 package.json 文件中。这样以后部署这个项目的时候，就可以运行 `npm install` 来安装了。
+这样不但能在项目内安装 gulp ，而且还可以包 gulp 以及相应版本写入到 package.json 文件中。以后部署这个项目的时候，就可以运行 `npm install` 来安装了。
 
 ### 使用 Gulp
 
 使用 Gulp 参考了这个项目： <https://github.com/shakyShane/jekyll-gulp-sass-browser-sync>
+
+安装 sass
+
+{% highlight console %}
+npm install --save-dev gulp-sass
+{% endhighlight %}
 
 <https://www.npmjs.com/package/gulp-sass> 上的 gulpfile 内容有问题，运行不了。下面是正确的 gulpfile.js 文件：
 
