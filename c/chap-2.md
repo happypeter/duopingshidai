@@ -3,6 +3,9 @@ layout: course
 title: 第二章：安装开发环境
 ---
 
+整个环境参考了这个项目： <https://github.com/shakyShane/jekyll-gulp-sass-browser-sync> ，整个环境搭建起来，跟 [Google 的 Web Starter Kit](https://developers.google.com/web/tools/starter-kit/) 差不多了，它的最核心的功能咱们几乎都用上了：Gulp ，Sass ，BrowserSync ，Autoprefixer 。有一个它不用的咱们也用上了，就是 Jekyll 。
+
+
 ## 第一节  jekyll&gulp 开发环境简介
 
 主要是展示整个环境，各个部分的功能，让大家感觉有意思，不细说。宏观如下图：
@@ -74,7 +77,6 @@ npm install --save-dev gulp
 
 ### 使用 Gulp
 
-使用 Gulp 参考了这个项目： <https://github.com/shakyShane/jekyll-gulp-sass-browser-sync>
 
 安装 sass
 
@@ -108,26 +110,47 @@ gulp 的插件系统不是闹着玩？css minfiy ， image compression ... 各�
 
 tmux 使用可以参考 <http://haoduoshipin.com/v/41> 。
 
-## 第三节 jekyll 和 browsersync
+## 第三节 jekyll 加入游戏
+
+看一下幻灯片，整个图景之上还有一个第二主角就是 Jekyll ，这一集来把 Jekyll 和 Autoprefixer 都添加上。
+
+Jekyll 功能，我们会关心的，主要有两个，第一，可以把很多 html 片段文件拼接成一个文件，第二个，就是做 Sass 的预处理。那一个问题就来了，为什么我们不用 Jekyll 的 Sass 预处理功能呢？原因有两个：
+
+- 第一，Jekyll Build 命令执行一次时间比较长，而我们希望每次修改完之后，页面能够实时刷新
+- 第二，Jekyll 的 sass 功能不容易扩展，比如我想要添加 autoprefixer 功能，或者是 css 文件压缩功能，这样还是用 gulp 系统的插件来实现比较方便。
+
+
+现在我们先把 autoprefixer 添加上。到项目文件夹内，
+
+{% highlight console %}
+npm install --save-dev gulp-autoprefixer
+{% endhighlight %}
+
+
+然后到 gulpfile.js 中添加相应的代码就可以了。最终的 gulpfile.js 代码大家可以在项目代码中找到。
+
+### 使用 jekyll
+
+虽然 Gulp 系统很容易通过添加插件来扩展功能，但是使用 Jekyll 提供的文件组织规范来把 html 的 layout 文件，和各个 partial 文件进行拼接还是很方便的。下面安装 jeyll ：
 
 {% highlight console %}
 gem install jekyll
 {% endhighlight %}
 
-这个需要装。
+来新建一个 task 专门运行 `jekyll build` 这个命令。这个需要用到 nodejs 开启子进程的功能，可以需要一点 Unix 系统的基础知识才能理解，我们作为前端开发者，暂时不用太关心，主要是这些代码：
+
+{% highlight js %}
+var cp          = require('child_process');
+...
+gulp.task('jekyll-build', function (done) {
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+{% endhighlight %}
+
+
 
 <!-- ### 文件组织
-
-大的原则是：每一个文件内容都很少，打开一眼就能看清结构
-- index.html 里面几乎全部是 `include hero.html `
-- hero.html 还可以 `include hero_action_btn.html `
-- 所有的 partial 包括 sub_partial 都放在 _inlcludes/ 顶级下，用文件名作 namespace
-- 每个 partial 都有一个跟自己同名的 .scss
-- main.scss 中同样只 import 第一级 partial 的 .scss 文件（ 其中 import sub_partial 的 .scss ），
- -->
-
-<!--
-
 
 ### 搭建开发环境
 
@@ -159,8 +182,9 @@ server {
 
 
 - jekyll build 耗时很长，大概5秒，其中有一半时间是在拷贝 node_modules 目录到 _site/ 蠢！
+  - A: 配置 _config.yml 文件
 
 ` .pipe(gulp.dest('css'));`  jekyll-gulp-sass-browser-sync 项目中的这一句是必要的，没有这一句，再 执行 ‘jekyll-rebuild' task 的时候，_site/* 会被删除。而源码目录中又没有 css/ 目录，所以是不能正确生成网站的。
-
-
   -->
+
+### 第四节 Browsersync 和 Sublime 配置

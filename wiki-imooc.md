@@ -16,6 +16,9 @@ title: 课程大纲
 
 <!-- 相应式三大技术一定要提一下
 理论知识课程里面一定从略，指向我的书，在我的书里面要详细讲
+
+鼓吹一下：咱们课程中用到的 gulp 这套系统，其实也是 google 全力推动的，见  web starter kit
+同样的思路也会在 http://yeoman.io/ 中被看到，所以这套课程也可以为学习 yeoman 打下基础。
  -->
 
 <!--  就是重新设计  http://www.imooc.com/view/333  -->
@@ -58,6 +61,8 @@ title: 课程大纲
  -->
 
 ### 第三章 移动优先
+
+<!-- sans-serif 字体在 billie 电脑上都很难看，回头还是参照 https://jinshuju.net/ 改一下吧-->
 
 如果您认为一个网站应该先设计桌面版然后在去为小屏设备去调整，对不起，您错了！“移动优先”恰好是一套相反的思路。本章解释一下移动优先好处有哪些？
 
@@ -121,7 +126,12 @@ title: 课程大纲
 <!-- 弄个 piechart  做过优良可差的评分统计-->
 
 
+<!-- FIXME: 弹性布局绝对是应该放在，media-query 之前讲清楚的
+图片要用 Max-width 了
+section 用 50% 了。
 
+下面的：第二节：绝对变相对。可以单独作为一章
+ -->
 
 ### 第五章 寻找临界点
 
@@ -133,9 +143,13 @@ title: 课程大纲
 
 <!--
 
+自己拿不准的问题，一律参考：http://yeoman.io/
+
+http://mediaqueri.es/
 ### break point
 
- Peter 自己的观点是，不要设置全局的三个临界点，每个部分（ 也就是每个 css 中）自己顾自己就可以了。
+ - Peter 自己的观点是，不要设置全局的三个临界点，每个部分（ 也就是每个 css 中）自己顾自己就可以了。
+   - web component 是趋势，所以还是“模块化”思想，每个元器件负责自己，只有当 have to 的时候再用清晰的接口跟其他模块沟通。设计上也应该是这样。
  -->
 <!--
 ### em/rem
@@ -200,6 +214,10 @@ http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-br
 - 第二节 弹性视频播放器
 
 <!--
+https://css-tricks.com/video-screencasts/141-getting-the-images-and-numbers-for-responsive-images/
+
+https://developers.google.com/web/fundamentals/media/images/?hl=en
+
 - http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-breakpoint--cms-22706
  - 14:00 有图片的讲解，包含了 retina 设备
 
@@ -218,6 +236,14 @@ http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-br
 - 第二节 前端框架中的响应式启示
 - 第三节 响应式优化过的第三方库
 
+<!--
+webstarter kit
+h5bt
+http://yeoman.io/
+pure/foundation/bs
+ploymer
+ -->
+
 ### 第七章 Goodbye
 
 录制这门课程，我自己认为是把网上所有最优秀的学习资源都看了，但是有哪些值得推荐呢？只是其中的一小部分。
@@ -226,6 +252,7 @@ http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-br
 <!-- peter,相关的参考资料等，从这门课一开始，做个统计，可以添加到本网站的wiki中，如参考资料链接、补充资料、相关教学资料等。
  -->
 
+<!-- 做成一个 webapp 挺有意思https://developers.google.com/web/fundamentals/device-access/?hl=en -->
 
 ### 大纲重叠
 
