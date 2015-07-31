@@ -195,7 +195,7 @@ gulp.task('sass', function () {
 
 首先，到 _layouts/default.html 中，添加 html 的基本骨架
 
-{% raw %}
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -205,12 +205,12 @@ gulp.task('sass', function () {
 </head>
 <body>
 
-
+{% raw %}
 {{ content }}
-
+{% endraw %}
 </body>
 </html>
-{% endraw %}
+{% endhighlight %}
 
 然后到 res-demo/index.html 中填入
 
