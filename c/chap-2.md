@@ -131,11 +131,15 @@ npm install --save-dev gulp-autoprefixer
 
 ### 使用 jekyll
 
-虽然 Gulp 系统很容易通过添加插件来扩展功能，但是使用 Jekyll 提供的文件组织规范来把 html 的 layout 文件，和各个 partial 文件进行拼接还是很方便的。下面安装 jeyll ：
+Jekyll 本身的使用方法可以参考 [好多视频网第113期](http://haoduoshipin.com/v/113) 。
+
+虽然 Gulp 系统很容易通过添加插件来扩展功能，但是使用 Jekyll 提供的文件组织规范来把 html 的 layout 文件，和各个 partial 文件进行拼接还是很方便的。下面安装 jekyll ：
 
 {% highlight console %}
 gem install jekyll
 {% endhighlight %}
+
+注意，jekyll 是一个 ruby gem ，所以先要安装 ruby 语言，参考 [ Rails 十日谈](http://www.imooc.com/learn/230) 。
 
 来新建一个 task 专门运行 `jekyll build` 这个命令。这个需要用到 nodejs 开启子进程的功能，可以需要一点 Unix 系统的基础知识才能理解，我们作为前端开发者，暂时不用太关心，主要是这些代码：
 
