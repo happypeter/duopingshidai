@@ -153,6 +153,86 @@ gulp.task('jekyll-build', function (done) {
 {% endhighlight %}
 
 
+每次执行 `jekyll-build` 任务的时候，都会有一些我们不想要的文件夹被拷贝的 _site 文件夹里面，可以通过配置 _config.yml 文件来解决：
+
+{% highlight yaml %}
+exclude: ['node_modules/', 'package.json', 'gulpfile.js']
+{% endhighlight %}
+
+好，这一节就到这里。
+
+
+## 第四节 Browsersync 和 Sublime 配置
+
+
+
+需要在 gulpfile.js 中添加的代码如下
+
+{% highlight js %}
+var browserSync = require('browser-sync').create();
+...
+
+gulp.task('browser-sync',  function() {
+    browserSync.init({
+        server: {
+            baseDir: '_site'
+        }
+    });
+});
+...
+
+gulp.task('sass', function () {
+...
+         .pipe(browserSync.stream());
+...
+});
+{% endhighlight %}
+
+注意，此时 _site/index.html 中一定要自己动手填入一个 html 的基本框架进来，尤其要有 `link` 标签，用来引用 css/main.css 和 `<body>` 标签（ browsersync 会把自己的 js 语句添加到 body 标签之后）。
+
+好，这时候 sass 任务没问题了，也就是每次修改 _scss/main.scss 之后，页面是可以自动刷新了。下面来看当 html 文件修改了怎么办？
+
+
+首先，到 _layouts/default.html 中，添加 html 的基本骨架
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>res</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+{{ content }}
+
+</body>
+</html>
+{% endhighlight %}
+
+然后到 res-demo/index.html 中填入
+
+{% highlight html %}
+<div class="peter">Peter</div>
+{% endhighlight %}
+
+这样，当运行 jekyll-bulid 任务的时候，上面两个文件就会合并导出到 _site/index.html 了。
+
+下面来看 gulpfile.js 中的改动
+
+
+{% highlight js %}
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+...
+         .pipe(gulp.dest('./css'));
+...
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*.html', 'images/*'], ['jekyll-rebuild']);
+{% endhighlight %}
+
 <!-- ### 文件组织
 
 ### 搭建开发环境
@@ -184,10 +264,5 @@ server {
 }
 
 
-- jekyll build 耗时很长，大概5秒，其中有一半时间是在拷贝 node_modules 目录到 _site/ 蠢！
-  - A: 配置 _config.yml 文件
-
 ` .pipe(gulp.dest('css'));`  jekyll-gulp-sass-browser-sync 项目中的这一句是必要的，没有这一句，再 执行 ‘jekyll-rebuild' task 的时候，_site/* 会被删除。而源码目录中又没有 css/ 目录，所以是不能正确生成网站的。
   -->
-
-## 第四节 Browsersync 和 Sublime 配置

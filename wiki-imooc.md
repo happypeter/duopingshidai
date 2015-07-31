@@ -143,6 +143,9 @@ section 用 50% 了。
 
 <!--
 
+- 我的页面上多处用到了网格，目前的实现方案还是比较土。应该参照 http://getbootstrap.com/2.3.2/scaffolding.html#gridSystem 的方式，先制作出类似的网格系统，然后往里面填入内容。
+  - 调页面的过程应该是这样，先把具体每一网格中的 html 内容都注释掉，然后等流体网格调试出来之后，再插入具体内容。
+
 自己拿不准的问题，一律参考：http://yeoman.io/
 
 http://mediaqueri.es/
