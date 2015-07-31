@@ -195,22 +195,21 @@ gulp.task('sass', function () {
 
 首先，到 _layouts/default.html 中，添加 html 的基本骨架
 
-{% highlight html %}
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>res</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>res</title>
+      <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
 
 
-{{ content }}
+    {{ content }}
 
-</body>
-</html>
-{% endhighlight %}
+    </body>
+    </html>
 
 然后到 res-demo/index.html 中填入
 
