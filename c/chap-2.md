@@ -140,14 +140,13 @@ gem install jekyll
 来新建一个 task 专门运行 `jekyll build` 这个命令。这个需要用到 nodejs 开启子进程的功能，可以需要一点 Unix 系统的基础知识才能理解，我们作为前端开发者，暂时不用太关心，主要是这些代码：
 
 {% highlight js %}
-var cp          = require('child_process');
+var cp = require('child_process');
 ...
 gulp.task('jekyll-build', function (done) {
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
+  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+            .on('close', done);
 });
 {% endhighlight %}
-
 
 
 <!-- ### 文件组织
@@ -187,4 +186,4 @@ server {
 ` .pipe(gulp.dest('css'));`  jekyll-gulp-sass-browser-sync 项目中的这一句是必要的，没有这一句，再 执行 ‘jekyll-rebuild' task 的时候，_site/* 会被删除。而源码目录中又没有 css/ 目录，所以是不能正确生成网站的。
   -->
 
-### 第四节 Browsersync 和 Sublime 配置
+## 第四节 Browsersync 和 Sublime 配置
