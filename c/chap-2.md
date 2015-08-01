@@ -368,7 +368,15 @@ gulp.task('default', ['browser-sync', 'watch']);
 res_demo_rsync.sh 脚本内容如下
 
 {% highlight bash %}
+#!/usr/bin/env bash
+sync_server()
+{
+    echo
+    rsync -arv  --exclude "css" --exclude ".git" --exclude "node_modules" --exclude "_site"  --delete ~/Desktop/res-demo/ peter@haoduoshipin.com:~/res-demo/
+    echo
+}
 
+sync_server
 {% endhighlight %}
 
 对应的 sublime build 脚本内容
