@@ -162,24 +162,75 @@ exclude: ['node_modules/', 'package.json', 'gulpfile.js']
 好，这一节就到这里。
 
 
-## 第四节 Browsersync 和 Sublime 配置
+## 第四节 Browsersync 搭建
+
+过程参考 Browsersync 官网的这篇文档：<http://www.browsersync.io/docs/gulp/> 。
+
+### 静态服务器
+
+首先需要安装 browser-sync
+
+{% highlight console %}
+npm install browser-sync gulp --save-dev
+{% endhighlight %}
+
+打开 gulpfile 文件，添加下面的内容
+
+{% highlight js %}
+var browserSync = require('browser-sync').create();
+
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./_site"
+        }
+    });
+});
+{% endhighlight %}
+
+这样，运行 `gulp browser-sync` 就可以看到服务器跑在 3000 端口了。
+
+### 设置反向代理
+
+服务器上不能直接访问 3000 端口，不过可以通过设置反向代理来解决。
+
+创建 `/etc/nginx/sites-enabled/gulp.conf` 文件，内容如下：
+
+{% highlight nginx %}
+server {
+    listen         80;
+    server_name j.haoduoshipin.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_x_forwarded_host;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_read_timeout 3m;
+        proxy_send_timeout 3m;
+    }
+}
+{% endhighlight %}
 
 
+这样，运行
+
+{% highlight console %}
+sudo service nginx reload
+{% endhighlight %}
+
+重新加载一下设置，就可以通过访问 http://j.haoduoshipin.com 看 `_site` 目录（ 也就是文件夹 ) 下的内容了。
+
+
+### 实时加载 css
 
 需要在 gulpfile.js 中添加的代码如下
 
 {% highlight js %}
-var browserSync = require('browser-sync').create();
-...
-
-gulp.task('browser-sync',  function() {
-    browserSync.init({
-        server: {
-            baseDir: '_site'
-        }
-    });
-});
-...
 
 gulp.task('sass', function () {
 ...
