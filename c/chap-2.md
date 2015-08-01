@@ -268,10 +268,14 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 重启 gulp ，这样每次我修改 _scss/main.scss 文件的时候，就可以看到页面效果实时刷新了，yeeeah!
 
-## 第五节 修改 html 后的页面自动加载
+## 第五节 大功告成
+
+来把剩下的工作完成，包括修改 html 后运行 jekyll build ，以及用 Sublime 修改然后同步到服务器。
+
+
+### 修改 html
 
 好，这时候 sass 任务没问题了，也就是每次修改 _scss/main.scss 之后，页面是可以自动刷新了。下面来看当 html 文件修改了怎么办？
-
 
 首先，到 _layouts/default.html 中，添加 html 的基本骨架
 
@@ -361,7 +365,6 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['browser-sync', 'watch']);
 {% endhighlight %}
-
 
 ### rsync 同步
 
