@@ -329,3 +329,20 @@ var messages = {
 gulp.task('browser-sync', function() {
     browserSync.init({
 {% endhighlight %}
+
+
+### rsync 同步
+
+res_demo_rsync.sh 脚本内容如下
+
+{% highlight bash %}
+
+{% endhighlight %}
+
+对应的 sublime build 脚本内容
+
+{% highlight json %}
+{
+  "cmd": "/Users/peter/bin/res_demo_rsync.sh"
+}
+{% endhighlight %}
