@@ -228,6 +228,28 @@ sudo service nginx reload
 
 ### 实时加载 css
 
+咱们的目的还是要看到 css 修改后，页面实时刷新。
+
+所以，先打开 _site/index.html 把里面的内容改为：
+
+{% highlight html %}
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Index</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="peter">
+    Peter
+  </div>
+</body>
+</html>
+{% endhighlight %}
+
+
+
 需要在 gulpfile.js 中添加的代码如下
 
 {% highlight js %}
