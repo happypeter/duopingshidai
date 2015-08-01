@@ -249,6 +249,7 @@ sudo service nginx reload
 {% endhighlight %}
 
 
+这样，再来启动 gulp ，到浏览器中刷新看一下，会有 'connetcted to browsersycn' 的字样，并且在源码中可以看到一些自动添加进来的 js 代码。那你可能会奇怪，为啥刚才没有这些东西呢？就是因为现在页面中有了 `<body>` 标签了，而 browsersync 工作是要依赖于这个标签的，参考 <http://www.browsersync.io/docs/> 的说明。
 
 需要在 gulpfile.js 中添加的代码如下
 
@@ -256,12 +257,18 @@ sudo service nginx reload
 
 gulp.task('sass', function () {
 ...
-         .pipe(browserSync.stream());
+-         .pipe(gulp.dest('./css'));
++         .pipe(gulp.dest('./_site/css'))
++         .pipe(browserSync.stream());
 ...
 });
+...
+gulp.task('default', ['browser-sync', 'watch']);
 {% endhighlight %}
 
-注意，此时 _site/index.html 中一定要自己动手填入一个 html 的基本框架进来，尤其要有 `link` 标签，用来引用 css/main.css 和 `<body>` 标签（ browsersync 会把自己的 js 语句添加到 body 标签之后）。
+重启 gulp ，这样每次我修改 _scss/main.scss 文件的时候，就可以看到页面效果实时刷新了，yeeeah!
+
+## 第五节 修改 html 后的页面自动加载
 
 好，这时候 sass 任务没问题了，也就是每次修改 _scss/main.scss 之后，页面是可以自动刷新了。下面来看当 html 文件修改了怎么办？
 
