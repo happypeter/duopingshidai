@@ -312,36 +312,20 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*.html', 'images/*'], ['jekyll-rebuild']);
 {% endhighlight %}
 
-<!-- ### 文件组织
+### 最终版本的 gulpfile.js
 
-### 搭建开发环境
+内容如下：
 
-### 3000 -> 80
+{% highlight js %}
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var cp = require('child_process');
+var browserSync = require('browser-sync').create();
 
-像 jekyll 或者是 rails s 这些都是跑在 3000 端口的，放到服务器上默认是不能访问的，解决方法是设置 reverse proxry
-ref: https://github.com/sharelatex/sharelatex/wiki/Nginx-as-a-Reverse-Proxy
-
-
-/etc/nginx/site-enabled/site.conf
-
-peter@aliyun:~/jekyll-gulp-sass-browser-sync$ cat /etc/nginx/sites-enabled/jekyll.conf
-server {
-    listen         80;
-    server_name j.haoduoshipin.com;
-
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Host $http_x_forwarded_host;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_read_timeout 3m;
-        proxy_send_timeout 3m;
-    }
-}
-
-
-` .pipe(gulp.dest('css'));`  jekyll-gulp-sass-browser-sync 项目中的这一句是必要的，没有这一句，再 执行 ‘jekyll-rebuild' task 的时候，_site/* 会被删除。而源码目录中又没有 css/ 目录，所以是不能正确生成网站的。
-  -->
+var messages = {
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+};
+gulp.task('browser-sync', function() {
+    browserSync.init({
+{% endhighlight %}
