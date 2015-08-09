@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  line-height: 1.7;
-  color: #212121;
+  background: #fafafa;
+  line-height: 1.8;
+  color: #808080;
   font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   //https://jinshuju.net/
   -webkit-font-smoothing: antialiased;
@@ -125,14 +125,6 @@ h1.book-title {
 
 .main {
   margin-top: 7em;
-}
-.card {
-  background-color: #fff;
-  margin: 1.3em 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 3em 1.5em 1em 1.5em;
-  font-weight: 300;
-  border-radius: 0 0 2px 2px;
 }
 
 .card h3 {

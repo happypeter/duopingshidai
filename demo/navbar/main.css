@@ -1,8 +1,7 @@
 
 body {
-  color: #808080;
-  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  background-color: #fafafa;
+  color: #fff;
+  font-family: sans-serif;
 }
 .navbar {
   background-color: rgb(30, 170, 241);
