@@ -27,29 +27,12 @@ title: 课程大纲
 
 使用 jekyll 这个简单的框架来辅助开发。因为代码量比较大，直接都写在一个文件中维护起来就很头疼，jekyll 带有布局文件和代码片段导入的各种小功能，可以让代码结构清晰。另外会配合 Gulp 来运行一些自动化任务，比如 sass 编辑，添加 vendor 前缀，以及用 browersync 来调试页面。
 
-- 第一节 jekyll&Gulp 环境
-- 第二节 Sass 和 Browsersync
+- 第一节 jekyll&gulp 开发环境简介
+- 第二节 安装 gulp 和 sass
+- 第三节 jekyll 加入游戏
+- 第四节 使用 Browsersync 实现页面自动刷新
+- 第五节 大功告成
 
-
-<!--
-- 可以先完成 navbar 部分，然后再来分离 layout
-- 步骤
-  - 新建 _layouts/default.html
-  - 里面添加 {{ content }}
-  - 就可以了，没必要使用 _config.yml
-  - github page 实在太慢，推荐给大家就行了，实际演示的时候用我自己的服务器
-    - http://book.haoduoshipin.com/go-responsive/demo/class/
-    - 大家 jekyll server 的过程就不演示了，不然就成了后端课程了
-
-    With LiveReload, you have to install browser extension, but BrowserSync uses Socket.io, so it can supports more than one browser at once. This is great for working with responsive design, where screens with different sizes are needed to be tested.
-
-    - 尝试 web componnet 的思路
-    - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
-    - _includes/navbar.html partical 名字起得跟 .scss 文件同名
-    - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
-
-
- -->
 
 ### 第三章 移动优先
 
@@ -63,6 +46,13 @@ title: 课程大纲
 <!-- 举出那个按钮的小例子，展示出先做移动版有什么好处 -->
 <!-- 这一节主要就是介绍移动优先思路的好处 -->
 <!-- 应对无穷的设备尺寸 -->
+
+<!--
+    - 尝试 web componnet 的思路
+    - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
+    - _includes/navbar.html partical 名字起得跟 .scss 文件同名
+    - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
+ -->
 
 
 <!-- - 对比一下 bootstrap 和 initializer 还是用 initializer 手写吧 -->

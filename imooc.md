@@ -39,8 +39,11 @@ title: 课程大纲
 
 使用 jekyll 来组织代码。另外会配合 Gulp 来运行一些自动化任务，例如 saas ，autoprefixer 和 browsersync 。
 
-- 第一节 jekyll&gulp 环境简介
-- 第二节 安装 gulp 和 jekyll
+- 第一节 jekyll&gulp 开发环境简介
+- 第二节 安装 gulp 和 sass
+- 第三节 jekyll 加入游戏
+- 第四节 使用 Browsersync 实现页面自动刷新
+- 第五节 大功告成
 
 ### 第三章 移动优先
 

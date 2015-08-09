@@ -162,7 +162,7 @@ exclude: ['node_modules/', 'package.json', 'gulpfile.js']
 好，这一节就到这里。
 
 
-## 第四节 Browsersync 搭建
+## 第四节 使用 Browsersync 实现页面自动刷新
 
 过程参考 Browsersync 官网的这篇文档：<http://www.browsersync.io/docs/gulp/> 。
 
