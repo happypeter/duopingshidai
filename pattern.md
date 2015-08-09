@@ -61,7 +61,7 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
 <!-- 文字内容就参考 https://www.udacity.com/course/viewer#!/c-ud893/l-3561069759/m-3484798853 -->
 <!-- 给出一个实际中采用这种方案的例子 -->
 
-![](images/pattern/most_fluid.png)
+![](images/pattern/mostly_fluid.png)
 
 这种模式我翻译为“基本流体”，这种方式其实跟 Column Drop 差不多，只是稍微灵活了一点。跟前面的 Column Drop 一样，当屏幕最窄的时候，元素一个跟一个排成一列。当布局开始变宽，会出现网格模式，具体每一行上有几列内容就不一定了，根据我们自己页面的内容自由调整。宽到一定程度，主体内容的左右两侧就会出现 margin ，而不是让主体内容一直跟着 viewport 来变宽。
 
