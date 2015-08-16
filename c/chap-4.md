@@ -1,4 +1,5 @@
 ---
+layout: c-default
 title: 第四章 最窄屏幕设计
 ---
 
