@@ -26,7 +26,7 @@ scss 代码分割成很多小文件，用 `import` 语句，导入到 main.scss 
 viewport 那一句必须提到了，不然后面垂直排几个大块儿的时候，高度都没办法设置了。
 
 
-# 第二节 定制色盘l
+### 第二节 定制色盘
 
 ### 明确需求
 
@@ -112,3 +112,13 @@ footer 就用黑色
 
 google 的官网上有关于色盘使用的详细介绍：https://www.google.com/design/spec/style/color.html#
 视频：https://design.google.com/videos/palette-perfect/
+
+
+### 第三节 色盘上各个辅助色用法
+
+
+字体设置
+
+{% highlight css %}
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+{% endhighlight %}
