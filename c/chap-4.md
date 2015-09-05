@@ -28,10 +28,7 @@ viewport 那一句必须提到了，不然后面垂直排几个大块儿的时�
 
 ### 第二节 定制色盘
 
-### 明确需求
-
-Peter 是 In-Browser-Design 的信徒，反对先 photoshop/sketch 然后再 css 的传统设计流程。所以明确需求阶段，最多也就是用铅笔在纸上勾勒一下客户要的效果，然后快速就进浏览器了。这里我们就来重新设计一下慕课网的课程展示页面，例如
-<http://www.imooc.com/view/390> 。所以内容比较明确了，现在直接上手写 html/css 了。
+Peter 是 In-Browser-Design 的信徒，反对先 photoshop/sketch 然后再 css 的传统设计流程。所以明确需求阶段，最多也就是用铅笔在纸上勾勒一下客户要的效果，然后快速就进浏览器了。这里我们就来重新设计一下慕课网的课程展示页面，例如 <http://www.imooc.com/view/390> 。所以内容比较明确了，现在直接上手写 html/css 了。
 
 
 先来划定好大块，根据 imooc 的页面需求
@@ -46,9 +43,9 @@ Peter 是 In-Browser-Design 的信徒，反对先 photoshop/sketch 然后再 css
 <footer></footer>
 {% endhighlight %}
 
-然后来定制色盘。
+然后来[定制色盘](http://www.materialpalette.com/brown/deep-orange
+)。
 
-http://www.materialpalette.com/brown/deep-orange
 
 来定制 common.scss 文件。
 
@@ -65,60 +62,15 @@ $divider-color:        #B6B6B6;
 
 用色盘色来填充大块。
 
-第一块，用课程 poster 来填充。
-   - 这个还是用 primary color 暂时弄上吧，一个任意背景色的大图，放到页面上，很难不对整个的页面色调造成影响，挑战主色的地位。
-   - 不行在小屏上，就把他弄成圆形的，用主色当他的背景？。。。下一集再说了。
-
-
-第二块，课程介绍
-
-正好可以使用 primary-text-color 和 secondary-text-color
-
-第三块，action
-
-正好可以用来使用 accent-color
-
-第四块 toc 留白就行，未来使用 google 的小圆图标背景的样式。
-https://design.google.com/resources/#material-design-guidelines
-
-或者这里也有很多小圆圈：http://webdesign.tutsplus.com/tutorials/web-design-for-kids-color--cms-24378
-
-第五块，stat
-
-用来使用 primary-color 和 primary-color-text 。用上 svg 图标。
-
-第六块，author
-
-用来使用 primary-color 作为大背景，以及  primary-color-text 和 primary-color-secondary-text
-用 primary-color-dark 来做 github/dribble 等标签的字体色，表示强调
-
-- warning： 用一下 primary-color-light/dark ? 真的不知道怎么用？
-  - 老师告诉你能学到什么，用 light ，表示没有 warning 的部分重要
-    - warning 用 primary-color-dark 或者 primary-color .
-  - 深浅搭配其实能出很多美妙效果的
-    - 例如这里的进度条 https://dribbble.com/shots/1422850-Team-Messages
-    - 这里的 follow 按钮：https://dribbble.com/shots/1546643-Twitter-Profile
-    - 甚至是这里的，深色托主色，主色内嵌入浅色：https://dribbble.com/shots/2066081-Elephone-Landing-Page-V2/attachments/370465
-
-  - https://design.google.com/videos/palette-perfect/
-    - 视频中给的建议：
-      - 500 作为页面主色
-      - dark：700 作为状态栏
-      - light: 300 作为次要信息栏
-      - 的确如果这三种上面用了相同透明度的白色字体，那么显眼程度是很不一样的。
-
-footer 就用黑色
-
-
-google 的官网上有关于色盘使用的详细介绍：https://www.google.com/design/spec/style/color.html#
-视频：https://design.google.com/videos/palette-perfect/
-
+google 的官网上有关于色盘使用的[详细介绍](https://www.google.com/design/spec/style/color.html)，还有一个[精彩视频](https://design.google.com/videos/palette-perfect/) 。
 
 ### 第三节 色盘上各个辅助色用法
-
 
 字体设置
 
 {% highlight css %}
 font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 {% endhighlight %}
+
+
+深浅背景色搭配是可以出很漂亮的效果的。例如[这里的进度条](https://dribbble.com/shots/1422850-Team-Messages) 以及 [这里的 follow 按钮](https://dribbble.com/shots/1546643-Twitter-Profile)
