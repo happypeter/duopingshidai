@@ -1,5 +1,5 @@
 ---
-layout: c-default
+layout: course
 title: 第四章 最窄屏幕设计
 ---
 
@@ -8,6 +8,14 @@ title: 第四章 最窄屏幕设计
 # 第一节 Chrome 移动调试工具
 
 这一集里面，来一起认识一下 Chrome 移动调试工具。并了解一下 viewport 设置对于移动页面开发的作用。明确一下需求，并且把代码的骨架搭建起来。
+
+- 简介一下 in-browser-design 的优势
+- 明确一下需求
+- 动手搭建页面排版骨架
+- 给每个部分设置高度
+- 用 chrome mobile dev tool 打开
+- 设置 viewport
+
 
 scss 代码分割成很多小文件，用 `import` 语句，导入到 main.scss 中，同理，html 代码也分割成很多小的局部文件，然后用 jekyll 的 `include` 导入到当前 html 文件中。文件小，不超过四五十行，这样一旦打开这个文件，那么结构是一目了然的，这个对于开发和排错其实都是蛮重要的。
 
@@ -58,15 +66,49 @@ $divider-color:        #B6B6B6;
 用色盘色来填充大块。
 
 第一块，用课程 poster 来填充。
-
-{% highlight css %}
-header {
-  background-image: url('/images/poster.jpg');
-  height: 150px;
-  background-size: cover;
-  background-position: center center;
-}
-{% endhighlight %}
+   - 这个还是用 primary color 暂时弄上吧，一个任意背景色的大图，放到页面上，很难不对整个的页面色调造成影响，挑战主色的地位。
+   - 不行在小屏上，就把他弄成圆形的，用主色当他的背景？。。。下一集再说了。
 
 
+第二块，课程介绍
 
+正好可以使用 primary-text-color 和 secondary-text-color
+
+第三块，action
+
+正好可以用来使用 accent-color
+
+第四块 toc 留白就行，未来使用 google 的小圆图标背景的样式。
+https://design.google.com/resources/#material-design-guidelines
+
+或者这里也有很多小圆圈：http://webdesign.tutsplus.com/tutorials/web-design-for-kids-color--cms-24378
+
+第五块，stat
+
+用来使用 primary-color 和 primary-color-text 。用上 svg 图标。
+
+第六块，author
+
+用来使用 primary-color 作为大背景，以及  primary-color-text 和 primary-color-secondary-text
+用 primary-color-dark 来做 github/dribble 等标签的字体色，表示强调
+
+- warning： 用一下 primary-color-light/dark ? 真的不知道怎么用？
+  - 老师告诉你能学到什么，用 light ，表示没有 warning 的部分重要
+    - warning 用 primary-color-dark 或者 primary-color .
+  - 深浅搭配其实能出很多美妙效果的
+    - 例如这里的进度条 https://dribbble.com/shots/1422850-Team-Messages
+    - 这里的 follow 按钮：https://dribbble.com/shots/1546643-Twitter-Profile
+    - 甚至是这里的，深色托主色，主色内嵌入浅色：https://dribbble.com/shots/2066081-Elephone-Landing-Page-V2/attachments/370465
+
+  - https://design.google.com/videos/palette-perfect/
+    - 视频中给的建议：
+      - 500 作为页面主色
+      - dark：700 作为状态栏
+      - light: 300 作为次要信息栏
+      - 的确如果这三种上面用了相同透明度的白色字体，那么显眼程度是很不一样的。
+
+footer 就用黑色
+
+
+google 的官网上有关于色盘使用的详细介绍：https://www.google.com/design/spec/style/color.html#
+视频：https://design.google.com/videos/palette-perfect/

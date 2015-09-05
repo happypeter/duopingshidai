@@ -53,6 +53,10 @@ title: 课程大纲
 - 第二节 汉堡包按钮导航栏
 - 第三节 使用 SVG 来创建图标
 
+
+<!--
+Material Design "google's visual framework"
+ -->
 <!--
     - 尝试 web componnet 的思路
     - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
@@ -89,9 +93,6 @@ title: 课程大纲
  -->
 
 <!-- Material Design
-- get a color platte and use it
-- http://webdesign.tutsplus.com/tutorials/web-design-for-kids-color--cms-24378
-
 - 另外 google.com/design 不是有个专门介绍 plattet 使用的视频吗?
 
  -->
