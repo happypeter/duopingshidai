@@ -2,11 +2,6 @@
 title: 课程大纲
 ---
 
-
-<!-- 基本上 google treehouse 以及 css-tricks 上的优秀内容都不要放过 -
-  我的课程中就讲动手的，理论方面的都在书里面详细写就行
- -->
-
 ### 第一章 举杯多屏时代
 
 为啥当代 web 开发者必须要会响应式布局，响应式布局的历史渊源，所涉及到的主要技术，实例展示。本套课程的讲解思路，以及适合观众。
@@ -39,77 +34,19 @@ title: 课程大纲
 如果您认为一个网站应该先设计桌面版然后在去为小屏设备去调整，对不起，您错了！“移动优先”恰好是一套相反的思路。
 
 - 第一节 由简入繁易，由繁如简难
-- 第二节 几种相应模式
-
+- 第二节 四种响应模式
 
 
 ### 第四章 最窄屏幕设计
 
-根据移动优先的思路，开始为所有设备中最小宽度的屏幕来制作页面。这时布局一般是很简单的，单列布局。采用 Google Material Design 风格来制作页面。
+根据移动优先的思路，开始为所有设备中最小宽度的屏幕来制作页面。这时布局一般是很简单的，单列布局。采用 Google Material Design 风格来制作页面。会涉及色盘定制和 SVG 图标制作。
 
 
 - 第一节 Chrome 移动调试工具
-- 第一节 Material Design
-- 第二节 汉堡包按钮导航栏
-- 第三节 使用 SVG 来创建图标
+- 第二节 定制色盘
+- 第三节 使用色盘上的颜色
+- 第四节 使用 SVG 来制作图标
 
-
-<!--
-Material Design "google's visual framework"
- -->
-<!--
-    - 尝试 web componnet 的思路
-    - sass 文件中给一个 main.scss 里面 @inclue ‘navbar'
-    - _includes/navbar.html partical 名字起得跟 .scss 文件同名
-    - 只有一个例外就是 @include 'common' # 这个可以去 H5BT 中拷贝一些代码进来
- -->
-
-<!--   - 就照着这个来：http://qd.haoduoshipin.com/
-  - 先选定最窄屏幕 iphone5 ，单位就先用 px 来做
-  - 使用 chrome 移动调试工具
-  - viewport 在最一开始就要涉及了，写个 hello World 页面，用 chrome 移动调试工具打开就可以看到
-    320 像素的 iphone5，实际的宽度就是 980 了。
-    http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
-
-  - 基本字体的解决思路
-    html {
-      font-size: 14px
-      @media (min-width: tablet) {
-        font-size: 16px;
-      }
-    }
-  - em 用在器件内部， rem 用来控制间距，这个思路值得专门提一下
- -->
-
-
-
-<!--
-- font-size
-  - 移动设备上设置一个比较小的字体，例如：14px
-  - 当 viewport 变宽后：font-size: 112%; 就可以了
-  - as shown: http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-breakpoint--cms-22706 10:49
-
-
- -->
-
-<!-- Material Design
-- 另外 google.com/design 不是有个专门介绍 plattet 使用的视频吗?
-
- -->
-
-<!-- https://www.google.com/design/icons 这里来下载 icon -->
-<!--     - http://toy.haoduoshipin.com/gm/material-design/introduction.html 这个挺简单
- -->
-
-<!-- 弄个 piechart  做过优良可差的评分统计-->
-
-
-<!-- FIXME: 弹性布局绝对是应该放在，media-query 之前讲清楚的
-图片要用 Max-width 了
-section 用 50% 了。
-
-下面的：第二节：绝对变相对。可以单独作为一章
- -->
 
 ### 第五章 寻找临界点
 
@@ -117,9 +54,17 @@ section 用 50% 了。
 
 - 第一节 寻找临界点（ Break Point ）
 - 第二节 绝对变相对
-- 第三节 常用响应模式（ Responsive Pattern ）
 
-<!--
+
+<!-- FIXME:
+
+https://teamtreehouse.com/library/responsive-layouts/media-queries/creating-breakpoints
+
+弹性布局绝对是应该放在，media-query 之前讲清楚的
+图片要用 Max-width 了
+section 用 50% 了。
+
+第二节：绝对变相对。可以单独作为一章
 
 - 我的页面上多处用到了网格，目前的实现方案还是比较土。应该参照 http://getbootstrap.com/2.3.2/scaffolding.html#gridSystem 的方式，先制作出类似的网格系统，然后往里面填入内容。
   - 调页面的过程应该是这样，先把具体每一网格中的 html 内容都注释掉，然后等流体网格调试出来之后，再插入具体内容。
@@ -132,59 +77,6 @@ http://mediaqueri.es/
  - Peter 自己的观点是，不要设置全局的三个临界点，每个部分（ 也就是每个 css 中）自己顾自己就可以了。
    - web component 是趋势，所以还是“模块化”思想，每个元器件负责自己，只有当 have to 的时候再用清晰的接口跟其他模块沟通。设计上也应该是这样。
  -->
-<!--
-### em/rem
-- http://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
-    For this reason, the primary purpose of em units should be to allow for scalability within the context of a specific design element.
-
-- 元器件内部的长度距离，用 em 设置最好，但是字体本身用 rem 更好
-  - http://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
-
-### EM 的妙用
-
-
-- http://simurai.com/blog/2014/05/04/cssconf/
-  - 18: 41 em for padding rem for margin
-
-- http://webdesign.tutsplus.com/tutorials/quick-tip-try-combining-ems-and-rems--cms-23270
-
-- em/rem 学习并不难？devtools 中查看 computed 一项就知道了
-
-- http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
-
- -->
-<!--
-
-- 控制每一行的文字数量是个重要任务。
-
-@media 可以 nested in a style definition as shown here:
-
-http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-breakpoint--cms-22706
-
-I think it's simpler code, plus a `no-query` bonus, as shown at 18:30
- -->
-
-<!-- 临界点这里还有一个 touch !!!
-http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-breakpoint--cms-22706
-
-14:48
-
-  - 还涉及到了 modernlizer 的使用
- -->
-
-<!-- Ie8 不支持 rem ，所以才有这个项目：https://github.com/robwierzbowski/grunt-pixrem -->
-
-<!--  要基于内容，而非设备宽度来设置临界点
-   多变的响应模式 新的模式不断出现，但是总有几种是最为重要，不可不知的。
-
-- 第一节 列下沉 Column Drop
-- 第二节 基本流动 Mostly Fluid
-- 第三节 自由变换 Layout Shifter
- -->
-
-<!--  em & rem & 百分比 都应在何时选用，要在代码例子中体现妙处来
-理论就不讲了，和那个老师重复
- -->
 
 
 ### 第五章 弹性媒体
@@ -192,10 +84,14 @@ http://webdesign.tutsplus.com/tutorials/simplify-your-media-queries-with-sass-br
 大屏设备，视网膜屏，智能手表这些设备的出现，给图片和视频的使用带来了新的挑战，技术上又哪些要注意的点，本章来揭晓。
 
 - 第一节 响应式环境下的图片
+
+<!-- http://www.botaiusti.com/ hero 大图绝对值得一讲 -->
 - 第二节 弹性视频播放器
 
 <!--
 https://css-tricks.com/video-screencasts/141-getting-the-images-and-numbers-for-responsive-images/
+
+http://webdesign.tutsplus.com/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015
 
 https://developers.google.com/web/fundamentals/media/images/?hl=en
 
@@ -228,7 +124,11 @@ ploymer
 ### 第七章 Goodbye
 
 录制这门课程，我自己认为是把网上所有最优秀的学习资源都看了，但是有哪些值得推荐呢？只是其中的一小部分。
+<!--
+http://webdesign.tutsplus.com/categories/responsive-web-design?page=4
 
+觉对值得推荐的资源
+ -->
 
 <!-- peter,相关的参考资料等，从这门课一开始，做个统计，可以添加到本网站的wiki中，如参考资料链接、补充资料、相关教学资料等。
  -->
@@ -322,6 +222,3 @@ peter，你这边以实践为主，
 那位老师以整体移动web知识为主，同时个老师以小案例来说明问题。
 happypeter  11:33:08
 对。我的思路就是：我的这两章我都删掉，动手部分都融入到其他章节。后面我录的时候参照他的大纲绕开他要讲的内容就好了。
-知音  11:33:54
-嗯，好，谢谢对我的支持。
-

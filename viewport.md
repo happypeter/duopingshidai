@@ -3,8 +3,6 @@ layout: book
 title: viewport 视窗
 ---
 
-
-
 <!-- 这个内容是动手制作 响应式 页面的第一步，是否应该放到比较靠前的章节呢？ -->
 
 这节来聊 viewport （视窗）， viewport 就是浏览器可以用来显示页面内容的屏幕区域。会涉及到的重要概念是 dip （ device-independent pixel 设备无关像素 ）和 CSS pixel 之间的关系。
