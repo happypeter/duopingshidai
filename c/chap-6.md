@@ -11,4 +11,6 @@ title: 第六章 Goodbye
 - [http://mediaqueri.es/](http://mediaqueri.es/)
 - [tuts+ 的文章](http://webdesign.tutsplus.com/categories/responsive-web-design?page=4)
 - [bootstrap](http://getbootstrap.com/getting-started/)
+- [react](http://facebook.github.io/react/)
+- [polymer](https://www.polymer-project.org/1.0/)
 
