@@ -1,9 +1,7 @@
 ---
 layout: course
-title: 第六章 Goodbye
+title: Goodbye
 ---
-
-# 第六章 Goodbye
 
 总结一下可以推荐的优秀参考资源。
 
