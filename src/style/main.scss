@@ -38,7 +38,7 @@ a {
 
 .container {
   max-width: 960px;
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -58,6 +58,10 @@ blockquote {
 // landing page
 
 .index.header {
+  a {
+    color: white;
+    line-height: 1.9;
+  }
 }
 
 h1.book-title {
@@ -68,7 +72,7 @@ h1.book-title {
   padding-bottom: 30px;
 }
 
-.card h2 {
+h2 {
   text-align: center;
   margin-top: 3rem;
   color: #606060;
@@ -128,20 +132,20 @@ h1.book-title {
   margin-top: 7em;
 }
 
-.card h3 {
+h3 {
   font-size: 1.3em;
   margin-top: 1.3em;
   margin: .4em 0;
   color: #606060;
 }
 
-.card img {
+img {
   display: block;
   max-width: 80%;
   margin: 25px auto;
 }
 
-.card p {
+p {
   margin-top: 0;
   margin-bottom: 1em;
 }
