@@ -7,9 +7,9 @@
 
 在 CSS2.1 中定义了媒体类型，通过给 `<link>` 元素添加 media 属性，可以为不同的媒体类型加载不同的样式表。
 
-{% highlight html %}
+```html
 <link rel="stylesheet" href="main.css" media="screen">
-{% endhighlight %}
+```
 
 媒体查询（ media queries ）是对媒体类型（ media types ）的一次扩展，通常媒体类型会出现在链接 css 样式文件的时候。媒体查询可以为单个浏览器和设备类型指定不同的样式，诸如视窗（ viewport ）宽度或者设备方向， 对设备的判断能力进一步加强了。这种给不同设备使用其专属样式的能力，为响应式网站设计开启了一片新的天地。
 
@@ -17,18 +17,18 @@
 
 媒体查询有两种不同的使用方法，一种是在已有的样式表文件中使用 @media 规则，另一种是使用 @import 规则导入一张新的样式表，或在 HTML 文档中链接到一个单独的样式表文件。通常来说，推荐使用的方法是在已有的样式表文件中使用 @media 规则，避免增加额外的 HTTP 请求。
 
-{% highlight html %}
+```html
 <!-- Separate CSS File -->
 <link href="main.css" rel="stylesheet" media="screen and (min-width: 480px)">
-{% endhighlight %}
+```
 
-{% highlight css %}
+```css
 /* @media Rule */
 @media screen and (min-width: 480px) {...}
 
 /* @import Rule */
 @import url(main.css) screen and (min-width: 480px) {...}
-{% endhighlight %}
+```
 
 每一个媒体查询可能会包含一个媒体类型，紧接着是一个或多个表达式。常见的媒体类型包括 all、screen、print、tv 和 braille。HTML5 规范包含了新的媒体类型，甚至包括三维眼镜。若媒体查询中没有指定媒体类型，则默认为 screen。
 
@@ -40,21 +40,21 @@
 
 在媒体查询中使用 and 逻辑操作符可以添加新的表达式，并且浏览器或设备必须满足列出的所有条件，才能执行相关的 css 样式。多个媒体查询之间用逗号分隔开。举例说明，若选择宽度介于800像素到1024像素之间的所有媒体类型，该如何表示呢？
 
-{% highlight css %}
+```css
 @media all and (min-width: 800px) and (max-width: 1024px) {...}
-{% endhighlight %}
+```
 
 not 逻辑操作符对后面的表达式取反操作。下面的示例，css 样式将应用于非彩色屏幕的设备
 
-{% highlight css %}
+```css
 @media not screen and (color) {...}
-{% endhighlight %}
+```
 
 only 逻辑操作符是一个新出现的运算符，使用 HTML4 算法的浏览器并不支持它，这样一些较老的，不支持媒体查询的浏览器就不能使用它所给定的样式了。
 
-{% highlight css %}
+```css
 @media only screen and (color) {...}
-{% endhighlight %}
+```
 
 当使用 not 和 only 逻辑操作符的时候，如果没有指明媒体类型，则默认值为 all。
 
@@ -68,9 +68,9 @@ only 逻辑操作符是一个新出现的运算符，使用 HTML4 算法的浏�
 
 这个 height 和 width 特征来自于视窗渲染区域的高度和宽度，比方说浏览器窗口。另外两个，device-height 和 device-width 特征是基于输出设备的高度和宽度的，可能要比实际的渲染区域大一些。这些代表高度和宽度的媒体特征，其值既可以用相对单位表示，也可以用绝对单位表示。
 
-{% highlight css %}
+```css
 @media screen and (min-width: 320px) and (max-width: 780px) {...}
-{% endhighlight %}
+```
 
 在响应式网站设计中，最常用的媒体特征包括 min-width 和 max-width。与设备特性区分开来，有助于在桌面或移动设备上建立风格一致的网站。
 
@@ -111,7 +111,7 @@ shit. Time for a breakpoint!
 
 来举一个简单的例子，比如在小屏幕设备上，我们希望字体是 16px 大小，但是到了大屏设备上我们希望字体也大一些，变成 18px ，那么如果把临界点设置为 480px ，代码就应该写成这样：
 
-{% highlight css %}
+```css
 body {
   font-size: 16px; /* 移动优先，这个默认值是为移动设备而生 */
 }
@@ -121,7 +121,7 @@ body {
     font-size: 18px; /* 大屏设备 */
   }
 }
-{% endhighlight %}
+```
 
 也有人提出了“主要临界点”和“次要临界点”的概念。例如我可以给我的页面设置3个“主要临界点”，每到一个，页面结构就会有“大”的调整，例如内容由一列变为两列。在两个临界点之间，有时候需要做一些小的页面调整，比如改变一下按钮大小，这样可以通过设置“次要临近点”来实现。
 
