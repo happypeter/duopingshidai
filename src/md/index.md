@@ -3,7 +3,7 @@
     <img src="images/index/cover.png" />
   </div>
   <p class='book-description'>
-    如何让自己的网站变成响应式，在不同的设备上完美展示，提升用户体验
+    本书瞄准响应式设计，研究如何让自己的网站变成响应式，自动适应不同的屏幕尺寸。
   </p>
 </div>
 <!-- 添加这样的 http://yeoman.io/ 鼠标 hover 效果 -->

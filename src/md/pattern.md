@@ -14,15 +14,15 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
 这是最简单最常见的一种模式。
 
 
-{% highlight html %}
+```
 <div class="container">
   <div class="box dark_blue"></div>
   <div class="box light_blue"></div>
   <div class="box green"></div>
 </div>
-{% endhighlight %}
+```
 
-{% highlight css %}
+```
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
         width: 50%;
     }
 }
-{% endhighlight %}
+```
 
 实际中的一些网站：
 
@@ -64,7 +64,7 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
 这种模式我翻译为“基本流体”，这种方式其实跟 Column Drop 差不多，只是稍微灵活了一点。跟前面的 Column Drop 一样，当屏幕最窄的时候，元素一个跟一个排成一列。当布局开始变宽，会出现网格模式，具体每一行上有几列内容就不一定了，根据我们自己页面的内容自由调整。宽到一定程度，主体内容的左右两侧就会出现 margin ，而不是让主体内容一直跟着 viewport 来变宽。
 
 实现方式不唯一，下面的代码是用 flexbox 方式实现的，可供参考。首先 html 写成下面这样：
-{% highlight html %}
+```
 <div class="container">
   <div class="box dark_blue"></div>
   <div class="box light_blue"></div>
@@ -72,10 +72,10 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
   <div class="box red"></div>
   <div class="box orange"></div>
 </div>
-{% endhighlight %}
+```
 
 对应的 CSS ：
-{% highlight css %}
+```
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -107,7 +107,7 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
         margin-right: auto;
     }
 }
-{% endhighlight %}
+```
 
 实际例子：
 
@@ -125,7 +125,7 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
 
 当然，这种布局如果使用 flexbox 的 `order` 来实现是非常方便的：
 
-{% highlight html %}
+```
 <div class="container">
   <div class="box dark_blue"></div>
   <div class="container" id="container2">
@@ -134,11 +134,11 @@ Peter 这个翻译做“列下沉”。最窄的屏幕上，所有元素就垂�
   </div>
   <div class="box red"></div>
 </div>
-{% endhighlight %}
+```
 
 CSS 代码如下：
 
-{% highlight css %}
+```
 .container {
     width: 100%;
     display: flex;
@@ -168,7 +168,7 @@ CSS 代码如下：
         order: -1; /* appear first, default value is 0*/
     }
 }
-{% endhighlight %}
+```
 
 达成这种模式也不一定非要用 flexbox，比如下面这些实际中的例子：
 
@@ -185,16 +185,16 @@ Peter 翻译为”抽屉式“。[Off Canvas](https://www.udacity.com/course/vie
 
 实现方式，html 代码如下：
 
-{% highlight html %}
+```
 <nav id="drawer" class="dark_blue">
 </nav>
 <main class="light_blue">
 </main>
-{% endhighlight %}
+```
 
 CSS 代码：
 
-{% highlight css %}
+```
 html,
 body,
 main {
@@ -226,16 +226,16 @@ nav.open {
         flex-grow: 1;/* Allows the element to grow and take up the full remaining width of the viewport*/
     }
 }
-{% endhighlight %}
+```
 
 还要配合一些 js 代码：
 
-{% highlight js %}
+```
 menu.addEventListener('click', function(e) {
     drawer.classList.toggle('open');
     e.stopPropagation();
 })
-{% endhighlight %}
+```
 
 实际例子：下图来自 <https://www.canva.com/> ：
 

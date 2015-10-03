@@ -10,9 +10,9 @@
 
 那么怎么得到相对长度呢？ 响应式网站设计一词的缔造者 Ethan 给出了一个可靠的计算公式，可以用来确定弹性布局的比例值。
 
-{% highlight html %}
+```html
 target / parent = result
-{% endhighlight %}
+```
 
 上面这个公式的含义是，用一个元素的宽度（ target ）除以它的父元素的宽度（ parent ），那得到的计算结果（ result ）就是这个元素的相对宽度。
 
@@ -23,17 +23,17 @@ target / parent = result
 
 接下来看一个应用上面流体网格公式的例子，如何把一个固定宽度的两栏页面转变成一个弹性布局页面。
 
-{% highlight html %}
+```html
 <div class="main">
   <div class="content"></div>
   <div class="sidebar"></div>
 </div>
-{% endhighlight %}
+```
 
 一个父元素 main, 包含了两个子元素，子元素 content 居左，另一个子元素 menu 居右，[查看效果](http://book.haoduoshipin.com/go-responsive/demo/layout/fixed/)。
 为了叙述方便，抽取了一些 CSS 样式：
 
-{% highlight css %}
+```css
 .main {
   width: 900px;
 }
@@ -48,16 +48,16 @@ target / parent = result
   float: right;
   width: 210px;
 }
-{% endhighlight %}
+```
 
 现在依照上面的流体网格公式，把 content 和 menu 两个区块的宽度，以及它们的页边距用相对长度来表示，以 menu 区块为例：
 
-{% highlight css %}
+```css
 .menu {
   float: right;
   width: 23.33333333%; /* 210 / 900 = 0.2333333333 */
 }
-{% endhighlight %}
+```
 
 注意，无论父元素 main 变得有多宽，content 和 menu 区块的宽度和页边距都会按比例缩放。[点击这里](http://book.haoduoshipin.com/go-responsive/demo/layout/flexible/)，查看弹性布局效果。你需要调整浏览器窗口的大小才能看到变化。知道了弹性布局的概念和流体网格计算公式，并将其运用起来，你就能创建一个完全动态的网站，网站内容按照视窗尺寸缩放。为了更好的掌控弹性布局，你也可以对 min-width、max-width、 min-height 和 max-height 属性值采用相对长度单位。
 
@@ -72,11 +72,11 @@ target / parent = result
 
 让图片等媒介具有可伸缩性，一个简单有效的方法，就是把它的 max-width 属性值设置为 100%，意思是说它的最大宽度就是其容器的宽度。这样就能确保当浏览器窗口变小的时候，则网站上的媒介会依据其容器的大小而缩小尺寸，始终包裹在容器内。代码如下所示：
 
-{% highlight css %}
+```
 img, video, canvas {
   max-width: 100%;
 }
-{% endhighlight %}
+```
 
 Peter 身在秦皇岛，于是就从网上找了一张山海关的图片来做演示。[查看 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/image/)
 
@@ -94,20 +94,20 @@ vw、vh、vmin 和 vmax。目前浏览器对这些新加入成员的支持还不
 若使用 em 单位的元素定义了 font-size 为 12px，则此时 1em == 12px，那 2em == 24px；若没有，则找其父元素的字体大小，依次类推直到
 html 元素；若整个页面没有定义字体大小，而是使用浏览器默认字体大小 16px，则 1em == 16px。
 
-{% highlight html %}
+```
 <div class="main">
   <div class="content">em relative length unit</div>
 </div>
-{% endhighlight %}
+```
 
-{% highlight html %}
+```
 .main {
   font-size: 20px;
 }
 .content {
   margin: 1.5em; /* 1em == 20px */
 }
-{% endhighlight %}
+```
 
 这样若某些 CSS 属性使用了 em 单位，只要改变与其相关联的字体大小，就能改变这些属性值。
 
@@ -131,7 +131,7 @@ flex 容器，当空间变大时，其中的子元素也会随之扩大； 当�
 
 [查看 Flexbox 的一个 demo](http://book.haoduoshipin.com/go-responsive/demo/layout/flexbox/)。其中关键部分的代码如下：
 
-{% highlight css %}
+```
   .container {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -140,7 +140,7 @@ flex 容器，当空间变大时，其中的子元素也会随之扩大； 当�
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
-{% endhighlight %}
+```
 
 更多 Flexbox 的使用技巧，可以参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) 。
 
