@@ -31,13 +31,18 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('cp-assets', function () {
+    return gulp.src('src/assets/**/*')
+        .pipe(gulp.dest('dist/'));
+});
+
 
 
 gulp.task('rebuild', ['build'], function () {
     browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'build'], function() {
+gulp.task('browser-sync', ['sass', 'cp-assets', 'build'], function() {
     browserSync({
         server: {
             baseDir: 'dist'
