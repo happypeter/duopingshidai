@@ -14,7 +14,7 @@ title: go responsive
 
 <div class="container">
   <div class="book-cover">
-    <img src="images/index/cover.jpg"/>
+    <img src="images/index/cover.png"/>
   </div>
   <p class='book-description'>
     如何让自己的网站变成响应式，在不同的设备上完美展示，提升用户体验
