@@ -6,9 +6,9 @@
 
 如果没有 viewport 的设置，也就是下面这一行：
 
-{% highlight html %}
+```
  <meta name="viewport" content="width=device-width, initial-scale=1" />
-{% endhighlight %}
+```
 
 那么当一个普通桌面版页面在手机上打开的时候，会发现页面各个元素都会变得很小。
 
