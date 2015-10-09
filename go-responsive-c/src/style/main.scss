@@ -1,0 +1,240 @@
+@import "railscasts";
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  line-height: 1.8;
+  color: #808080;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  //https://jinshuju.net/
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 91%;
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #00bcd4;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee;
+  color: #999;
+}
+
+.header {
+  background-color: #00BCD4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  margin-bottom: 3em;
+  padding: 2em 0;
+}
+
+
+// landing page
+
+.index.header {
+  a {
+    color: white;
+    line-height: 1.9;
+  }
+}
+
+h1.book-title {
+  color: white;
+  margin: 0;
+  padding-top: 70px;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3rem;
+  color: #606060;
+  margin-bottom: 2.5rem;
+}
+
+.book-cover {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// page
+
+.page.header {
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+}
+
+
+.home {
+  color: #fff;
+  line-height: 64px;
+  font-weight: 400;
+  float: left;
+  font-size: 1.3em;
+}
+
+.chapter-title {
+  display: block;
+  float: left;
+  color: #fff;
+  font-size: 1.3em;
+  line-height: 64px;
+}
+
+.chapter-title:before {
+  background: no-repeat url("../images/separator.svg") right center;
+  background-size: contain;
+  content: '';
+  float: left;
+  height: 64px;
+  margin: 0 .3em 0 .3em;
+  width: .4em;
+}
+
+.main {
+  margin-top: 7em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-top: 1.3em;
+  margin: .4em 0;
+  color: #606060;
+}
+
+img {
+  display: block;
+  max-width: 80%;
+  margin: 25px auto;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* highlight */
+
+.highlight {
+  margin: 1em 0;
+  background: #2D3037;
+  padding: 5px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+@media ( max-width: 500px ) {
+  .highlight {
+    padding: 5px 9px;
+  }
+}
+
+code {
+  color: #4b4b4b;
+  font-weight: 700;
+}
+
+.highlight code {
+  color: #c5c8c6;
+}
+
+.highlight pre {
+  margin-top: 9px;
+  overflow-x: auto;
+}
+
+
+// index page toc
+
+.toc {
+  .chapter {
+    margin-bottom: 20px;
+  }
+}
+.toc .index {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+}
+.toc .title {
+  float: left;
+  margin-left: 20px;
+}
+.toc .title a {
+  line-height: 40px;
+  color: rgb(74, 74, 74);
+  font-size: 18px;
+}
+
+.toc .index.odd {
+  background-color: rgb(255, 137, 103);
+}
+.toc .index.even {
+  background-color: rgb(82, 179, 168);
+}
+.toc h3 {
+  text-align: center;
+  color: rgb(82, 179, 168);
+  font-size: 23px;
+}
+
+
+.footer {
+  background-color: rgb(0, 188, 212);
+  margin-top: 70px;
+}
+.footer .container {
+  text-align: right;
+  a {
+    color: white;
+    line-height: 90px;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 19px;
+  }
+}
