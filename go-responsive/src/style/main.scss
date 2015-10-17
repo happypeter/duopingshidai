@@ -226,25 +226,27 @@ code {
 .footer {
   background-color: rgb(0, 188, 212);
   margin-top: 70px;
+  padding-bottom: 2em;
 }
 .footer .container {
-  text-align: right;
+  text-align: center;
   a {
     color: white;
     line-height: 90px;
-    padding: 0 20px;
+    padding: 0 10px;
     font-weight: bold;
     font-size: 19px;
   }
 }
 
-footer .beian {
+.footer .beian {
   text-align: center;
 
 }
-footer .beian a {
+.footer .beian a {
   text-decoration: none;
   font-size: .9em;
   margin-top: 2em;
+  color: white;
 }
 
