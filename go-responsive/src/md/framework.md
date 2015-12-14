@@ -6,4 +6,4 @@
 
 [demo](http://book.haoduoshipin.com/go-responsive/demo/framework/)
 
-http://www.initializr.com/ 这里也有相应式的内容。
+http://www.initializr.com/ 这里也有响应式的内容。
